@@ -1,3 +1,5 @@
+![](./dotenv-logo.png)
+
 # dotenv-vault-vscode README
 
 This is the README for your extension "dotenv-vault-vscode". After writing up a brief description, we recommend including the following sections.
