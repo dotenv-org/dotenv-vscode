@@ -107,15 +107,17 @@ function dotenvWhoami () {
 
   infoMessage(command)
   const terminal = getTerminal()
-  runCommand(terminal, command)
+
+  terminal.sendText(`npx --yes dotenv-vault@${DOTENV_VAULT_VERSION} ${command}`)
+  terminal.show()
 }
 
 // helpers
-function infoMessage(command) {
+function infoMessage (command) {
   vscode.window.showInformationMessage(`Running dotenv-vault ${command}`)
 }
 
-function getTerminal() {
+function getTerminal () {
   let terminal = vscode.window.activeTerminal
   if (!terminal) {
     terminal = vscode.window.createTerminal(TERMINAL_NAME)
@@ -124,7 +126,7 @@ function getTerminal() {
   return terminal
 }
 
-function runCommand(terminal, command) {
+function runCommand (terminal, command) {
   terminal.sendText(`npx --yes dotenv-vault@${DOTENV_VAULT_VERSION} ${command} --yes`)
   terminal.show()
 }
