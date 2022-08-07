@@ -38,8 +38,8 @@
     "test": "node ./test/runTest.js",
     "package": "npm run lint && vsce package",
     "install-package": "code --install-extension",
-    "publish": "vsce publish",
-    "login": "vsce login"
+    "login": "vsce login",
+    "publish": "npm run lint && vsce package && vsce publish"
   },
   "publisher": "dotenv",
   "devDependencies": {
