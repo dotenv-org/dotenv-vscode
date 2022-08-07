@@ -16,33 +16,116 @@ function activate (context) {
   // This line of code will only be executed once when your extension is activated
   console.log(`Congratulations, your extension "dotenv-vault-vscode" with dotenv-vault@${DOTENV_VAULT_VERSION} is now active!`)
 
-  // The command has been defined in the package.json file
-  // Now provide the implementation of the command with  registerCommand
-  // The commandId parameter must match the command field in package.json
-  const hello = vscode.commands.registerCommand('dotenv.hello', function () {
-    // The code you place here will be executed every time your command is executed
+  const login = vscode.commands.registerCommand('dotenv.login', function () { dotenvLogin() })
+  const logout = vscode.commands.registerCommand('dotenv.logout', function () { dotenvLogout() })
+  const neww = vscode.commands.registerCommand('dotenv.new', function () { dotenvNew() })
+  const open = vscode.commands.registerCommand('dotenv.open', function () { dotenvOpen() })
+  const pull = vscode.commands.registerCommand('dotenv.pull', function () { dotenvPull() })
+  const push = vscode.commands.registerCommand('dotenv.push', function () { dotenvPush() })
+  const status = vscode.commands.registerCommand('dotenv.status', function () { dotenvStatus() })
+  const versions = vscode.commands.registerCommand('dotenv.versions', function () { dotenvVersions() })
+  const whoami = vscode.commands.registerCommand('dotenv.whoami', function () { dotenvWhoami() })
 
-    // Display a message box to the user
-    vscode.window.showInformationMessage('Hello World from dotenv-vscode!')
-  })
-  context.subscriptions.push(hello)
-
-  const open = vscode.commands.registerCommand('dotenv.open', function () {
-    dotenvOpen()
-  })
+  context.subscriptions.push(login)
+  context.subscriptions.push(logout)
+  context.subscriptions.push(neww)
   context.subscriptions.push(open)
+  context.subscriptions.push(pull)
+  context.subscriptions.push(push)
+  context.subscriptions.push(status)
+  context.subscriptions.push(versions)
+  context.subscriptions.push(whoami)
 }
 
+// commands
+function dotenvLogin () {
+  const command = 'login'
 
-function dotenvOpen() {
-  vscode.window.showInformationMessage('`dotenv-vault open` command executed on terminal')
+  infoMessage(command)
+  const terminal = getTerminal()
+  runCommand(terminal, command)
+}
 
+function dotenvLogout () {
+  const command = 'logout'
+
+  infoMessage(command)
+  const terminal = getTerminal()
+  runCommand(terminal, command)
+}
+
+function dotenvNew () {
+  const command = 'new'
+
+  infoMessage(command)
+  const terminal = getTerminal()
+  runCommand(terminal, command)
+}
+
+function dotenvOpen () {
+  const command = 'open'
+
+  infoMessage(command)
+  const terminal = getTerminal()
+  runCommand(terminal, command)
+}
+
+function dotenvPull () {
+  const command = 'pull'
+
+  infoMessage(command)
+  const terminal = getTerminal()
+  runCommand(terminal, command)
+}
+
+function dotenvPush () {
+  const command = 'push'
+
+  infoMessage(command)
+  const terminal = getTerminal()
+  runCommand(terminal, command)
+}
+
+function dotenvStatus () {
+  const command = 'status'
+
+  infoMessage(command)
+  const terminal = getTerminal()
+  runCommand(terminal, command)
+}
+
+function dotenvVersions () {
+  const command = 'versions'
+
+  infoMessage(command)
+  const terminal = getTerminal()
+  runCommand(terminal, command)
+}
+
+function dotenvWhoami () {
+  const command = 'whoami'
+
+  infoMessage(command)
+  const terminal = getTerminal()
+  runCommand(terminal, command)
+}
+
+// helpers
+function infoMessage(command) {
+  vscode.window.showInformationMessage(`Running dotenv-vault ${command}`)
+}
+
+function getTerminal() {
   let terminal = vscode.window.activeTerminal
   if (!terminal) {
     terminal = vscode.window.createTerminal(TERMINAL_NAME)
   }
 
-  terminal.sendText('npx --yes dotenv-vault@' + DOTENV_VAULT_VERSION + ' open --yes')
+  return terminal
+}
+
+function runCommand(terminal, command) {
+  terminal.sendText(`npx --yes dotenv-vault@${DOTENV_VAULT_VERSION} ${command} --yes`)
   terminal.show()
 }
 

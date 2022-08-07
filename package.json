@@ -3,7 +3,7 @@
   "displayName": "Dotenv Official",
   "description": "Official Dotenv",
   "author": "Mot @dotenvorg",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "license": "MIT",
   "homepage": "https://github.com/dotenv-org/dotenv-vscode",
   "icon": "dotenv.png",
@@ -24,19 +24,54 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:dotenv.hello",
-    "onCommand:dotenv.open"
+    "onCommand:dotenv.login",
+    "onCommand:dotenv.logout",
+    "onCommand:dotenv.new",
+    "onCommand:dotenv.open",
+    "onCommand:dotenv.pull",
+    "onCommand:dotenv.push",
+    "onCommand:dotenv.status",
+    "onCommand:dotenv.versions",
+    "onCommand:dotenv.whoami"
   ],
   "main": "./extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "dotenv.hello",
-        "title": "dotenv hello"
+        "command": "dotenv.login",
+        "title": "dotenv login"
+      },
+      {
+        "command": "dotenv.logout",
+        "title": "dotenv logout"
+      },
+      {
+        "command": "dotenv.new",
+        "title": "dotenv new"
       },
       {
         "command": "dotenv.open",
         "title": "dotenv open"
+      },
+      {
+        "command": "dotenv.pull",
+        "title": "dotenv pull"
+      },
+      {
+        "command": "dotenv.push",
+        "title": "dotenv push"
+      },
+      {
+        "command": "dotenv.status",
+        "title": "dotenv status"
+      },
+      {
+        "command": "dotenv.versions",
+        "title": "dotenv versions"
+      },
+      {
+        "command": "dotenv.whoami",
+        "title": "dotenv whoami"
       }
     ]
   },
