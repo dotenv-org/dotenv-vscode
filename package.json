@@ -1,7 +1,7 @@
 {
   "name": "dotenv-vscode",
-  "displayName": "Dotenv Official",
-  "description": "Official Dotenv",
+  "displayName": "Dotenv & Dotenv Vault Official",
+  "description": "Official Dotenv & Dotenv Vault Extension",
   "author": "Mot @dotenvorg",
   "version": "0.1.0",
   "license": "MIT",
@@ -101,6 +101,8 @@
   "keywords": [
     "dotenv",
     "dotenv-vault",
+    "environment variables",
+    "vault",
     "env",
     ".env",
     "environment",
