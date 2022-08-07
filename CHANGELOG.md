@@ -2,7 +2,13 @@
 
 All notable changes to the "dotenv-vault-vscode" extension will be documented in this file.
 
-## [Unreleased](https://github.com/dotenv-org/dotenv-vault-vscode/compare/v0.0.1...master)
+## [Unreleased](https://github.com/dotenv-org/dotenv-vault-vscode/compare/v0.0.4...master)
+
+## 0.0.4
+
+### Changed
+
+Update displayName
 
 ## 0.0.3
 

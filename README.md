@@ -1,6 +1,6 @@
 <img src="https://raw.githubusercontent.com/motdotla/dotenv/master/dotenv.png" />
 
-# dotenv-vault-vscode
+# dotenv and dotenv-vault
 
 Sync environment variables, with VS Code.
 
