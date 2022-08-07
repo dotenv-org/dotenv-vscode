@@ -1,9 +1,9 @@
 {
-  "name": "dotenv-vault-vscode",
-  "displayName": "dotenv and dotenv-vault",
+  "name": "dotenv-vault",
+  "displayName": "dotenv & dotenv-vault",
   "description": "Sync environment variables, from VS Code.",
   "author": "Mot @dotenvorg",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "license": "MIT",
   "homepage": "https://github.com/dotenv-org/dotenv-vault-vscode",
   "icon": "dotenv.png",
