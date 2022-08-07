@@ -28,3 +28,5 @@ For those with access.
 ```
 npm run publish
 ```
+
+[1] https://code.visualstudio.com/api/working-with-extensions/publishing-extension#publishing-extensions

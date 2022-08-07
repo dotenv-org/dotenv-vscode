@@ -7,6 +7,9 @@
   "license": "MIT",
   "homepage": "https://github.com/dotenv-org/dotenv-vault-vscode",
   "icon": "dotenv.png",
+  "sponsor": {
+    "url": "https://dotenv.org/pricing"
+  },
   "bugs": {
     "url": "https://github.com/dotenv-org/dotenv-vault-vscode/issues"
   },
