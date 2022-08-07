@@ -3,7 +3,7 @@
   "displayName": "Dotenv & Dotenv Vault Official",
   "description": "Official Dotenv & Dotenv Vault Extension",
   "author": "Mot @dotenvorg",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "MIT",
   "homepage": "https://github.com/dotenv-org/dotenv-vscode",
   "icon": "dotenv.png",
