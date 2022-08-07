@@ -1,9 +1,11 @@
-# Change Log
+# CHANGELOG
 
 All notable changes to the "dotenv-vault-vscode" extension will be documented in this file.
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+## [Unreleased](https://github.com/dotenv-org/dotenv-vault-vscode/compare/v0.0.1...master)
 
-## [Unreleased]
+## 0.0.1
 
-- Initial release
+### Added
+
+Initial release

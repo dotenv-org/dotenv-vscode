@@ -31,16 +31,6 @@ This extension contributes the following settings:
 * `myExtension.enable`: enable/disable this extension
 * `myExtension.thing`: set to `blah` to do something
 
-## Changelog
+## CHANGELOG
 
-### 0.0.1
-
-Hello world
-
-
-## Development
-
-```
-npm run lint // run standard formatting fixes
-npm run package // package for marketplace using vsce
-```
+See [CHANGELOG](CHANGELOG.md)
