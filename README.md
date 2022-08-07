@@ -1,8 +1,8 @@
 <img src="https://raw.githubusercontent.com/motdotla/dotenv/master/dotenv.png" />
 
-# dotenv and dotenv-vault
+# Official Dotenv
 
-Sync environment variables, with VS Code.
+Official support for dotenv.
 
 ## Features - TODO
 

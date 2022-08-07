@@ -11,12 +11,12 @@ npm run package
 Install it locally.
 
 ```
-npm run install-package dotenv-vault-vscode-x.x.x.vsix
+npm run install-package dotenv-vscode-x.x.x.vsix
 ```
 
 or install it by hand through Visual Studio Code.
 
-Click `Extensions` > `...` > `Install from VSIX` > `Select dotenv-vault-vscode-*-*-*.vsix`
+Click `Extensions` > `...` > `Install from VSIX` > `Select dotenv-vscode-*-*-*.vsix`
 
 [1] https://community.particle.io/t/how-to-install-a-vscode-extension-from-a-vsix-file/51014
 [2] https://code.visualstudio.com/docs/editor/extension-marketplace#_install-from-a-vsix
@@ -30,3 +30,4 @@ npm run publish
 ```
 
 [1] https://code.visualstudio.com/api/working-with-extensions/publishing-extension#publishing-extensions
+[2] https://marketplace.visualstudio.com/manage/publishers/dotenv

@@ -1,21 +1,21 @@
 {
-  "name": "dotenv-vault",
-  "displayName": "dotenv & dotenv-vault",
-  "description": "Sync environment variables, from VS Code.",
+  "name": "dotenv-vscode",
+  "displayName": "Dotenv Official",
+  "description": "Official Dotenv",
   "author": "Mot @dotenvorg",
   "version": "0.0.5",
   "license": "MIT",
-  "homepage": "https://github.com/dotenv-org/dotenv-vault-vscode",
+  "homepage": "https://github.com/dotenv-org/dotenv-vscode",
   "icon": "dotenv.png",
   "sponsor": {
     "url": "https://dotenv.org/pricing"
   },
   "bugs": {
-    "url": "https://github.com/dotenv-org/dotenv-vault-vscode/issues"
+    "url": "https://github.com/dotenv-org/dotenv-vscode/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/dotenv-org/dotenv-vault-vscode.git"
+    "url": "https://github.com/dotenv-org/dotenv-vscode.git"
   },
   "engines": {
     "vscode": "^1.70.0"
@@ -24,14 +24,19 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:dotenv-vault-vscode.helloWorld"
+    "onCommand:dotenv.hello",
+    "onCommand:dotenv.open"
   ],
   "main": "./extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "dotenv-vault-vscode.helloWorld",
-        "title": "Hello World"
+        "command": "dotenv.hello",
+        "title": "dotenv hello"
+      },
+      {
+        "command": "dotenv.open",
+        "title": "dotenv open"
       }
     ]
   },
@@ -42,7 +47,7 @@
     "package": "npm run lint && vsce package",
     "install-package": "code --install-extension",
     "login": "vsce login",
-    "publish": "npm run lint && vsce package && vsce publish"
+    "publish": "npm install && npm run lint && vsce package && vsce publish"
   },
   "publisher": "dotenv",
   "devDependencies": {
@@ -66,6 +71,7 @@
     "environment",
     "variables",
     "config",
-    "settings"
+    "settings",
+    "official"
   ]
 }
