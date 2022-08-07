@@ -24,7 +24,7 @@
 <a href="https://github.com/dotenv-org/dotenv-vault"><img src="https://raw.githubusercontent.com/dotenv-org/dotenv-vault/master/dotenv-vault.png"></a>
 
 <p align="center">
-Sync .env files across your machines, environments, and team members. Stop sharing .env files over insecure channels like Slack and email - from the same people that pioneered [dotenv](https://github.com/motdotla/dotenv).
+<strong>Dotenv Vault with VSCode</strong> securely syncs your .env files across your machines, environments, and team members. Stop sharing .env files over insecure channels like Slack and email - from the same people that pioneered <a href="https://github.com/motdotla/dotenv">dotenv</a>.
 </p>
 
 <p align="center">
