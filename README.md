@@ -5,7 +5,7 @@
   <br>
 </h1>
 
-<h4 align="center">Sync environment variables, securely.</h4>
+<h4 align="center">Sync your .env files, securely.</h4>
 
 <p align="center">
   <a href="#usage">Usage</a>
@@ -24,7 +24,7 @@
 <a href="https://github.com/dotenv-org/dotenv-vault"><img src="https://raw.githubusercontent.com/dotenv-org/dotenv-vault/master/dotenv-vault.png"></a>
 
 <p align="center">
-Securely sync your .env files across your machines, environments, and team members. Stop sharing .env files over insecure channels like Slack and email - from the same people that pioneered [dotenv](https://github.com/motdotla/dotenv).
+Sync .env files across your machines, environments, and team members. Stop sharing .env files over insecure channels like Slack and email - from the same people that pioneered [dotenv](https://github.com/motdotla/dotenv).
 </p>
 
 <p align="center">
