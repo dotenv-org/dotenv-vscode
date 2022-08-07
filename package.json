@@ -1,9 +1,9 @@
 {
   "name": "dotenv-vscode",
   "displayName": "Dotenv & Dotenv Vault Official",
-  "description": "Official Dotenv & Dotenv Vault Extension",
+  "description": "Official Dotenv & Dotenv Vault Extension. Add syntax and syncing support for .env files.",
   "author": "Mot @dotenvorg",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "license": "MIT",
   "homepage": "https://github.com/dotenv-org/dotenv-vscode",
   "icon": "dotenv.png",
@@ -12,9 +12,6 @@
     "theme": "dark"
   },
   "qna": false,
-  "sponsor": {
-    "url": "https://dotenv.org/pricing"
-  },
   "bugs": {
     "url": "https://github.com/dotenv-org/dotenv-vscode/issues"
   },
@@ -44,6 +41,22 @@
   ],
   "main": "./extension.js",
   "contributes": {
+    "languages": [
+      {
+        "id": "dotenv",
+        "aliases": [
+          ".env",
+          "env",
+          "environment variables",
+          "secrets",
+          "vault"
+        ],
+        "extensions": [
+          ".env*"
+        ],
+        "configuration": "./configuration.json"
+      }
+    ],
     "commands": [
       {
         "command": "dotenv.login",

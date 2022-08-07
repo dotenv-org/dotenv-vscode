@@ -1,36 +1,96 @@
-<img src="https://raw.githubusercontent.com/motdotla/dotenv/master/dotenv.png" />
+<h1 align="center">
+  <a href="https://docs.dotenv.org?r=1"><img src="https://raw.githubusercontent.com/motdotla/dotenv/master/dotenv.png" alt="dotenv-vault" width="100" height="100" ></a>
+  <br>
+  Dotenv for [Visual Studio Code](https://code.visualstudio.com/) <a href="https://twitter.com/intent/tweet?text=dotenv-vault%20-%20sync%20environment%20variables%2C%20securely%20https%3A%2F%2Fgithub.com%2Fdotenv-org%2Fdotenv-vscode&hashtags=dotenv"><img src="https://img.shields.io/badge/Tweet--lightgrey?logo=twitter&style=social" alt="Tweet" height="20"/></a>
+  <br>
+</h1>
 
-# Official Dotenv
+<h4 align="center">Sync environment variables, securely.</h4>
 
-Official support for dotenv.
+<p align="center">
+  <a href="#usage">Usage</a>
+  <img src="https://img.spacergif.org/v1/spacer.gif" width="5" height="1">
+  <a href="#how-it-works">How It Works</a>
+  <img src="https://img.spacergif.org/v1/spacer.gif" width="5" height="1">
+  <a href="#commands" target="_blank">Commands</a>
+  <img src="https://img.spacergif.org/v1/spacer.gif" width="5" height="1">
+  <a href="#health" target="_blank">Health</a>
+  <img src="https://img.spacergif.org/v1/spacer.gif" width="5" height="1">
+  <a href="#changelog">Changelog</a>
+</p>
 
-## Features - TODO
+<img src="https://img.spacergif.org/v1/spacer.gif" width="1" height="10">
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+<a href="https://github.com/dotenv-org/dotenv-vault"><img src="https://raw.githubusercontent.com/dotenv-org/dotenv-vault/master/dotenv-vault.png"></a>
 
-For example if there is an image subfolder under your extension project workspace:
+<p align="center">
+Securely sync your .env files across your machines, environments, and team members. Stop sharing .env files over insecure channels like Slack and email - from the same people that pioneered [dotenv](https://github.com/motdotla/dotenv).
+</p>
 
-\!\[feature X\]\(images/feature-x.png\)
+<p align="center">
+<a href="https://github.com/dotenv-org/dotenv-vscode"><img src="https://img.shields.io/visual-studio-marketplace/v/dotenv.dotenv-vscode?label=VS%20Marketplace&logo=visual-studio-code" alt="Version"></a>
+</p>
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+## Usage
 
-## Requirements - TODO
+Run `CMD+Shift+P` (or `Ctrl+Shift+P`) and start typing `dotenv`.
 
-AVOID HAVING REQUIREMENTS. IT SHOULD JUST WORK!
+Example:
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+```
+dotenv new
+```
 
-## Extension Settings
+```
+dotenv login
+```
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+```
+dotenv push
+```
 
-For example:
+## How It Works
 
-This extension contributes the following settings:
+<a href="https://www.dotenv.org/docs/security/dotenv-vault"><img src="./how-dotenv-vault-works.png" alt="How dotenv-vault works" width="500"/></a>
 
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
+Visit [dotenv.org/docs](https://www.dotenv.org/docs/security/overview?r=1) to learn more.
+
+## Commands
+
+```
+dotenv new       Create your project
+dotenv login     Log in to dotenv-vault
+dotenv logout    Log out
+dotenv open      Open project page
+dotenv push      Push .env securely
+dotenv pull      Pull .env securely
+dotenv versions  List version history
+dotenv whoami    Display the current logged in user
+dotenv status    Check dotenv-vault operational status
+```
+
+Visit [dotenv.org/docs](https://www.dotenv.org/docs/dotenv-vault?r=1) for details per command.
+
+## Health
+
+![](https://api.checklyhq.com/v1/badges/checks/c2fee99a-38e7-414e-89b8-9766ceeb1927?style=flat&theme=dark&responseTime=true)
+<br>
+![](https://api.checklyhq.com/v1/badges/checks/4f557967-1ed1-486a-b762-39a63781d752?style=flat&theme=dark&responseTime=true)
+<br>
+![](https://api.checklyhq.com/v1/badges/checks/804eb6fa-6599-4688-a649-7ff3c39a64b9?style=flat&theme=dark&responseTime=true)
+<br>
+![](https://api.checklyhq.com/v1/badges/checks/6a94504e-e936-4f07-bc0b-e08fee2734b3?style=flat&theme=dark&responseTime=true)
+<br>
+![](https://api.checklyhq.com/v1/badges/checks/06ac4f4e-3e0e-4501-9987-580b4d2a6b06?style=flat&theme=dark&responseTime=true)
+<br>
+![](https://api.checklyhq.com/v1/badges/checks/0ffc1e55-7ef0-4c2c-8acc-b6311871f41c?style=flat&theme=dark&responseTime=true)
+
+Visit [health.dotenv.org](https://health.dotenv.org) for more information.
 
 ## CHANGELOG
 
 See [CHANGELOG](CHANGELOG.md)
+
+## Acknowledgements
+
+- [Mike Stead](https://github.com/mikestead) for [dotenv extension for vscode](https://github.com/mikestead/vscode-dotenv)
