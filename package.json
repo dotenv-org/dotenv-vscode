@@ -2,7 +2,17 @@
   "name": "dotenv-vault-vscode",
   "displayName": "dotenv-vault-vscode",
   "description": "Sync environment variables, from VS Code.",
+  "author": "Mot @dotenvorg",
   "version": "0.0.1",
+  "license": "MIT",
+  "homepage": "https://github.com/dotenv-org/dotenv-vault-vscode",
+  "bugs": {
+    "url": "https://github.com/dotenv-org/dotenv-vault-vscode/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dotenv-org/dotenv-vault-vscode.git"
+  },
   "engines": {
     "vscode": "^1.70.0"
   },
@@ -24,7 +34,9 @@
   "scripts": {
     "lint": "standard --fix",
     "pretest": "npm run lint",
-    "test": "node ./test/runTest.js"
+    "test": "node ./test/runTest.js",
+    "package": "npm run lint && vsce package",
+    "install-package": "code --install-extension"
   },
   "devDependencies": {
     "@types/glob": "^7.2.0",
@@ -38,5 +50,15 @@
     "standard": "^17.0.0",
     "typescript": "^4.7.4",
     "vsce": "^2.10.0"
-  }
+  },
+  "keywords": [
+    "dotenv",
+    "dotenv-vault",
+    "env",
+    ".env",
+    "environment",
+    "variables",
+    "config",
+    "settings"
+  ]
 }
