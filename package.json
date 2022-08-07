@@ -1,7 +1,7 @@
 {
   "name": "dotenv-vscode",
-  "displayName": "Dotenv Official",
-  "description": "Official Extension for dotenv & dotenv-vault.",
+  "displayName": "Official Dotenv | Vault",
+  "description": "Official Dotenv Vault. Sync your .env files, with VSCode.",
   "author": "Mot @dotenvorg",
   "version": "0.1.4",
   "license": "MIT",
