@@ -1,0 +1,40 @@
+{
+  "name": "dotenv-vault-vscode",
+	"displayName": "dotenv-vault-vscode",
+	"description": "Sync environment variables, from VS Code.",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.70.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+        "onCommand:dotenv-vault-vscode.helloWorld"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"commands": [{
+            "command": "dotenv-vault-vscode.helloWorld",
+            "title": "Hello World"
+
+		}]
+	},
+	"scripts": {
+		"lint": "eslint .",
+		"pretest": "npm run lint",
+		"test": "node ./test/runTest.js"
+	},
+	"devDependencies": {
+        "@types/vscode": "^1.68.0",
+        "@types/glob": "^7.2.0",
+        "@types/mocha": "^9.1.1",
+        "@types/node": "16.x",
+        "eslint": "^8.18.0",
+        "glob": "^8.0.3",
+        "mocha": "^10.0.0",
+        "typescript": "^4.7.4",
+        "@vscode/test-electron": "^2.1.5"
+    }
+
+}
