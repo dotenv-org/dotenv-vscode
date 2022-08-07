@@ -3,10 +3,15 @@
   "displayName": "Dotenv & Dotenv Vault Official",
   "description": "Official Dotenv & Dotenv Vault Extension",
   "author": "Mot @dotenvorg",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "license": "MIT",
   "homepage": "https://github.com/dotenv-org/dotenv-vscode",
   "icon": "dotenv.png",
+  "galleryBanner": {
+    "color": "#000000",
+    "theme": "dark"
+  },
+  "qna": false,
   "sponsor": {
     "url": "https://dotenv.org/pricing"
   },
@@ -21,6 +26,9 @@
     "vscode": "^1.70.0"
   },
   "categories": [
+    "Languages",
+    "Formatters",
+    "SCM Providers",
     "Other"
   ],
   "activationEvents": [
