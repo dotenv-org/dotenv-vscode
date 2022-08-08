@@ -1,0 +1,231 @@
+{
+  "scopeName": "source.dotenv",
+  "patterns": [
+    {
+      "comment": "Comments",
+      "match": "^\\s?(#.*$)\\n",
+      "captures": {
+        "1": {
+          "patterns": [
+            {
+              "include": "#reminder"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "comment": "Entries",
+      "match": "^\\s?(export\\s?)*([\\w]+)\\s?(\\=)(.*)$",
+      "captures": {
+        "1": {
+          "name": "keyword.other.dotenv"
+        },
+        "2": {
+          "name": "variable.other.dotenv"
+        },
+        "3": {
+          "name": "keyword.operator.assignment.dotenv"
+        },
+        "4": {
+          "patterns": [
+            {
+              "include": "#boolean"
+            },
+            {
+              "include": "#numeric"
+            },
+            {
+              "include": "#string"
+            },
+            {
+              "include": "#interpolated"
+            },
+            {
+              "include": "#unquoted"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "repository": {
+    "reminder": {
+      "comment": "Reminder - starts with #",
+      "match": "(#).*",
+      "name": "comment.line.number-sign.dotenv",
+      "captures": {
+        "1": {
+          "name": "punctuation.definition.comment.dotenv"
+        }
+      }
+    },
+    "boolean": {
+      "comment": "Boolean Constants",
+      "match": "(?i)\\b(true|false|null)\\b(.*)",
+      "captures": {
+        "1": {
+          "name": "constant.language.dotenv"
+        },
+        "2": {
+          "patterns": [
+            {
+              "include": "#reminder"
+            }
+          ]
+        }
+      }
+    },
+    "numeric": {
+      "comment": "Numeric",
+      "match": "(?:\\+|-)?\\b((?:0(?:x|X)[0-9a-fA-F]*)|(?:(?:[0-9]+\\.?[0-9]*)|(?:\\.[0-9]+))(?:(?:e|E)(?:\\+|-)?[0-9]+)?)\\b(.*)",
+      "captures": {
+        "1": {
+          "name": "constant.numeric.dotenv"
+        },
+        "2": {
+          "patterns": [
+            {
+              "include": "#reminder"
+            }
+          ]
+        }
+      }
+    },
+    "string": {
+      "comment": "Strings (single)",
+      "name": "string.quoted.single.dotenv",
+      "begin": "(?<!\\\\)(\\')",
+      "beginCaptures": {
+        "1": {
+          "name": "punctuation.definition.string.begin.dotenv"
+        }
+      },
+      "end": "(\\')(.*)",
+      "endCaptures": {
+        "1": {
+          "name": "punctuation.definition.string.end.dotenv"
+        },
+        "2": {
+          "patterns": [
+            {
+              "include": "#reminder"
+            }
+          ]
+        }
+      }
+    },
+    "interpolation": {
+      "comment": "Template Syntax: \"foo ${bar} {$baz}\"",
+      "begin": "(\\$\\{|\\{)",
+      "beginCaptures": {
+        "1": {
+          "name": "string.interpolated.dotenv keyword.other.template.begin.dotenv"
+        }
+      },
+      "patterns": [
+        {
+          "match": "(?x)(\\$+)?([a-zA-Z_\\x{7f}-\\x{ff}][a-zA-Z0-9_\\x{7f}-\\x{ff}]*?\\b)",
+          "captures": {
+            "1": {
+              "name": "punctuation.definition.variable.dotenv variable.other.dotenv"
+            },
+            "2": {
+              "name": "variable.other.dotenv"
+            }
+          }
+        }
+      ],
+      "end": "(\\})",
+      "endCaptures": {
+        "1": {
+          "name": "string.interpolated.dotenv keyword.other.template.end.dotenv"
+        }
+      }
+    },
+    "variable": {
+      "patterns": [
+        {
+          "match": "(?x)(\\$+)([a-zA-Z_\\x{7f}-\\x{ff}][a-zA-Z0-9_\\x{7f}-\\x{ff}]*?\\b)",
+          "captures": {
+            "1": {
+              "name": "punctuation.definition.variable.dotenv variable.other.dotenv"
+            },
+            "2": {
+              "name": "variable.other.dotenv"
+            }
+          }
+        }
+      ]
+    },
+    "escape-characters": {
+      "patterns": [
+        {
+          "match": "\\\\[nrt\\\\\\$\\\"\\']",
+          "name": "constant.character.escape.dotenv"
+        }
+      ]
+    },
+    "unquoted": {
+      "comment": "Strings (none)",
+      "name": "string.unquoted.dotenv",
+      "match": "([^#]*)(#.*)?",
+      "captures": {
+        "1": {
+          "patterns": [
+            {
+              "include": "#interpolation"
+            },
+            {
+              "include": "#variable"
+            },
+            {
+              "include": "#escape-characters"
+            }
+          ]
+        },
+        "2": {
+          "patterns": [
+            {
+              "include": "#reminder"
+            }
+          ]
+        }
+      }
+    },
+    "interpolated": {
+      "comment": "Strings (double)",
+      "name": "string.quoted.double.dotenv",
+      "begin": "(\\\")",
+      "beginCaptures": {
+        "1": {
+          "name": "punctuation.definition.string.begin.dotenv"
+        }
+      },
+      "patterns": [
+        {
+          "include": "#interpolation"
+        },
+        {
+          "include": "#variable"
+        },
+        {
+          "include": "#escape-characters"
+        }
+      ],
+      "end": "(\\\")(.*)",
+      "endCaptures": {
+        "1": {
+          "name": "punctuation.definition.string.end.env"
+        },
+        "2": {
+          "patterns": [
+            {
+              "include": "#reminder"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

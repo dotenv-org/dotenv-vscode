@@ -2,8 +2,8 @@
   "name": "dotenv-vscode",
   "displayName": "Official Dotenv | Vault",
   "description": "Official Dotenv Vault. Sync your .env files, with VSCode.",
-  "author": "Mot @dotenvorg",
-  "version": "0.1.4",
+  "author": "Mot @motdotla",
+  "version": "0.2.0",
   "license": "MIT",
   "homepage": "https://github.com/dotenv-org/dotenv-vscode",
   "icon": "dotenv.png",
@@ -88,7 +88,14 @@
           ".env.staging.previous",
           ".env.production.previous"
         ],
-        "configuration": "./configuration.json"
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "dotenv",
+        "scopeName": "source.dotenv",
+        "path": "./syntaxes/dotenv.tmLanguage.json"
       }
     ],
     "commands": [

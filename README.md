@@ -10,6 +10,8 @@
 <p align="center">
   <a href="#install">Install</a>
   <img src="https://img.spacergif.org/v1/spacer.gif" width="5" height="1">
+  <a href="#features">Features</a>
+  <img src="https://img.spacergif.org/v1/spacer.gif" width="5" height="1">
   <a href="#usage">Usage</a>
   <img src="https://img.spacergif.org/v1/spacer.gif" width="5" height="1">
   <a href="#how-it-works">How It Works</a>
@@ -44,25 +46,49 @@ Install using VSCode Command Palette
 
 ## Usage
 
-Run `CMD+Shift+P` (or `Ctrl+Shift+P`) and start typing `dotenv`.
+Usage is similar to git. Run `CMD+Shift+P` (or `Ctrl+Shift+P`) and start typing `dotenv`.
 
-Example:
 
-```
+```bash
 dotenv new
 ```
 
-```
+Follow those instructions and then run:
+
+```bash
 dotenv login
 ```
 
-```
+Then run push and pull
+
+```bash
 dotenv push
+dotenv pull
 ```
+
+See it in action:
+
+<img src="https://raw.githubusercontent.com/dotenv-org/dotenv-vscode/master/overview.gif">
 
 ## How It Works
 
+<strong>Dotenv Vault</strong> holds your secrets in a secure and sophisticated way. Here's how it works.
+
 <a href="https://www.dotenv.org/docs/security/dotenv-vault"><img src="https://raw.githubusercontent.com/dotenv-org/dotenv-vault/master/how-dotenv-vault-works.png" alt="How dotenv-vault works" width="500"/></a>
+
+#### Security Specifications
+
+* The Dotenv Vault is a separate datastore from the application database. This way if an attacker gains access to the application database they do not gain access to the vault datastore.
+* The Dotenv Vault datastore is not accessible via the internet and all external connections are prevented. This way an attacker can not remotely access the Dotenv Vault datastore.
+* Encrypted clients are required and these clients have to go through the application - which has its own layers of encryption.
+* There are stricter TLS requirements for connecting to the Dotenv Vault datastore. TLS 1.0 cannot be used to connect.
+* The secrets stored in the Dotenv Vault are not just encrypted at the datastore level. They are also encrypted at each VALUE. This way even if an attacker gains access to the datastore they could not make sense of the encrypted values.
+* The VAULT does NOT store the KEY. It ONLY stores the VALUE. The KEY is stored in the application database and a shared pointer (in both datastores) allows them to be identified as a pair. This way an attacker must gain access to both the application database and the Dotenv Vault datastore to make sense of the values.
+* The encryption key(s) used to encrypt the secret values are rotated on an unpublished schedule. This way an attacker might gain access to an old encryption key but not the most recent - foiling their ability to decrypt the secret values.
+* Encryption uses AES-GCM encryption. It is a well-studied, NIST recommended, and IEFT standard algorithim.
+* As you see, we go to great lengths to make sure your secrets are safe. Afterall, we keep our secrets here as well.
+
+We hope you like <strong>Dotenv Vault</strong> as much as we do.
 
 Visit [dotenv.org/docs](https://www.dotenv.org/docs/security/overview?r=1) to learn more.
 
@@ -104,4 +130,4 @@ See [CHANGELOG](CHANGELOG.md)
 
 ## Acknowledgements
 
-- [Mike Stead](https://github.com/mikestead) for [dotenv extension for vscode](https://github.com/mikestead/vscode-dotenv)
+- [Iron Geek](https://github.com/IronGeek/vscode-env)
