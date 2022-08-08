@@ -2,7 +2,13 @@
 
 All notable changes to the Official Dotenv VS Code extension will be documented in this file.
 
-## [Unreleased](https://github.com/dotenv-org/dotenv-vscode/compare/v0.3.0...master)
+## [Unreleased](https://github.com/dotenv-org/dotenv-vscode/compare/v0.4.0...master)
+
+## 0.4.0
+
+### Added
+
+* Added autocompletion of process.env for .ts files and react code
 
 ## 0.3.0
 
