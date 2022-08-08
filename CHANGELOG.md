@@ -4,6 +4,8 @@ All notable changes to the Official Dotenv VS Code extension will be documented 
 
 ## [Unreleased](https://github.com/dotenv-org/dotenv-vscode/compare/v0.5.0...master)
 
+## 0.5.0
+
 ### Added
 
 * Added support for vue files to have autocompletion
