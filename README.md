@@ -8,6 +8,8 @@
 <h4 align="center">Sync your .env files, with VSCode.</h4>
 
 <p align="center">
+  <a href="#install">Install</a>
+  <img src="https://img.spacergif.org/v1/spacer.gif" width="5" height="1">
   <a href="#usage">Usage</a>
   <img src="https://img.spacergif.org/v1/spacer.gif" width="5" height="1">
   <a href="#how-it-works">How It Works</a>
@@ -30,6 +32,15 @@
 <p align="center">
 <a href="https://github.com/dotenv-org/dotenv-vscode"><img src="https://img.shields.io/visual-studio-marketplace/v/dotenv.dotenv-vscode?label=VS%20Marketplace&logo=visual-studio-code" alt="Version"></a>
 </p>
+
+## Install
+
+Install using VSCode Command Palette
+
+1. Go to `View -> Command Palette` or press `Ctrl+Shift+P`
+2. Then enter `Install Extension`
+3. Search for `Dotenv`
+4. Select `Official Dotenv | Vault` and click `Install`
 
 ## Usage
 
