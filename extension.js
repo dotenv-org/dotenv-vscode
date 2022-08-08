@@ -43,11 +43,26 @@ function activate (context) {
   const typescript = vscode.languages.registerCompletionItemProvider({ scheme: 'file', language: 'typescript' }, providers.javascriptCompletion, '.')
   const javascriptreact = vscode.languages.registerCompletionItemProvider({ scheme: 'file', language: 'javascriptreact' }, providers.javascriptCompletion, '.')
   const typescriptreact = vscode.languages.registerCompletionItemProvider({ scheme: 'file', language: 'typescriptreact' }, providers.javascriptCompletion, '.')
+  const vue = vscode.languages.registerCompletionItemProvider({ scheme: 'file', language: 'vue' }, providers.javascriptCompletion, '.')
 
   context.subscriptions.push(javascript)
   context.subscriptions.push(typescript)
   context.subscriptions.push(javascriptreact)
   context.subscriptions.push(typescriptreact)
+  context.subscriptions.push(vue)
+
+  // Hover
+  const javascriptHover = vscode.languages.registerHoverProvider({ scheme: 'file', language: 'javascript' }, providers.javascriptHover)
+  const typescriptHover = vscode.languages.registerHoverProvider({ scheme: 'file', language: 'typescript' }, providers.javascriptHover)
+  const javascriptreactHover = vscode.languages.registerHoverProvider({ scheme: 'file', language: 'javascriptreact' }, providers.javascriptHover)
+  const typescriptreactHover = vscode.languages.registerHoverProvider({ scheme: 'file', language: 'typescriptreact' }, providers.javascriptHover)
+  const vueHover = vscode.languages.registerHoverProvider({ scheme: 'file', language: 'vue' }, providers.javascriptHover)
+
+  context.subscriptions.push(javascriptHover)
+  context.subscriptions.push(typescriptHover)
+  context.subscriptions.push(javascriptreactHover)
+  context.subscriptions.push(typescriptreactHover)
+  context.subscriptions.push(vueHover)
 }
 
 // commands
