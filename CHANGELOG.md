@@ -4,6 +4,12 @@ All notable changes to the Official Dotenv VS Code extension will be documented 
 
 ## [Unreleased](https://github.com/dotenv-org/dotenv-vscode/compare/v0.5.0...master)
 
+## 0.5.1
+
+### Changed
+
+* Fix typescript support for hover
+
 ## 0.5.0
 
 ### Added
