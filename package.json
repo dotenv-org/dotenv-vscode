@@ -20,7 +20,7 @@
     "url": "https://github.com/dotenv-org/dotenv-vscode.git"
   },
   "engines": {
-    "vscode": "^1.30.0"
+    "vscode": "^1.68.0"
   },
   "categories": [
     "Languages",
