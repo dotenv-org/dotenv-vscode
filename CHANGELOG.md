@@ -2,7 +2,12 @@
 
 All notable changes to the Official Dotenv VS Code extension will be documented in this file.
 
-## [Unreleased](https://github.com/dotenv-org/dotenv-vscode/compare/v0.4.0...master)
+## [Unreleased](https://github.com/dotenv-org/dotenv-vscode/compare/v0.5.0...master)
+
+### Added
+
+* Added support for vue files to have autocompletion
+* Added hover support. Hover over a process.env.VARIABLE and view its vaulue set in your .env file 🎉
 
 ## 0.4.0
 
