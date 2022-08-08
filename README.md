@@ -10,8 +10,6 @@
 <p align="center">
   <a href="#install">Install</a>
   <img src="https://img.spacergif.org/v1/spacer.gif" width="5" height="1">
-  <a href="#features">Features</a>
-  <img src="https://img.spacergif.org/v1/spacer.gif" width="5" height="1">
   <a href="#usage">Usage</a>
   <img src="https://img.spacergif.org/v1/spacer.gif" width="5" height="1">
   <a href="#how-it-works">How It Works</a>
