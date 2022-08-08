@@ -8,31 +8,31 @@ All notable changes to the Official Dotenv VS Code extension will be documented 
 
 ### Changed
 
-README updates
+* README updates
 
 ## 0.1.3
 
 ### Changed
 
-Updated README
+* Updated README
 
 ## 0.1.2
 
 ### Changed
 
-Update banner and turn Q&A off. We will use GitHub Issues.
+* Update banner and turn Q&A off. We will use GitHub Issues.
 
 ## 0.1.1
 
 ### Changed
 
-Update displayName
+* Update displayName
 
 ## 0.1.0
 
 ### Added
 
-Added commands:
+* Added commands:
 
 ```
 login
@@ -50,28 +50,26 @@ whoami
 
 ### Changed
 
-Updated displayName
+* Updated displayName
 
 ## 0.0.4
 
 ### Changed
 
-Updated displayName
+* Updated displayName
 
 ## 0.0.3
 
 ### Added
 
-Added sponsor link
+* Added sponsor link
 
 ## 0.0.2
 
 ### Added
 
-Added icon to marketplace
+* Added icon to marketplace
 
 ## 0.0.1
-
-### Added
 
 Initial release
