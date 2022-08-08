@@ -104,4 +104,4 @@ See [CHANGELOG](CHANGELOG.md)
 
 ## Acknowledgements
 
-- [Mike Stead](https://github.com/mikestead) for [dotenv extension for vscode](https://github.com/mikestead/vscode-dotenv)
+- [Iron Geek](https://github.com/IronGeek/vscode-env)
