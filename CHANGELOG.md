@@ -2,7 +2,13 @@
 
 All notable changes to the Official Dotenv VS Code extension will be documented in this file.
 
-## [Unreleased](https://github.com/dotenv-org/dotenv-vscode/compare/v0.5.2...master)
+## [Unreleased](https://github.com/dotenv-org/dotenv-vscode/compare/v0.5.3...master)
+
+## 0.5.3
+
+### Added
+
+* Added support for more extension types - .vault, .me
 
 ## 0.5.2
 

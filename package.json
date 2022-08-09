@@ -3,7 +3,7 @@
   "displayName": "Official Dotenv | Vault",
   "description": "Official Dotenv Vault. Sync your .env files, with VSCode.",
   "author": "Mot @motdotla",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "license": "MIT",
   "homepage": "https://github.com/dotenv-org/dotenv-vscode",
   "icon": "dotenv.png",
@@ -71,6 +71,9 @@
           ".env.testing",
           ".env.qa",
           ".env.qa.local",
+          ".env.ci",
+          ".env.ci.local",
+          ".env.fart",
           ".env.uat",
           ".env.uat.local",
           ".env.stag",
@@ -87,7 +90,11 @@
           ".env.prod.local",
           ".env.previous",
           ".env.staging.previous",
-          ".env.production.previous"
+          ".env.production.previous",
+          ".fart",
+          ".vault",
+          ".project",
+          ".me"
         ],
         "configuration": "./language-configuration.json"
       }
@@ -179,7 +186,8 @@
     "settings",
     "official",
     "development",
-    "productivity"
+    "productivity",
+    "secrets"
   ],
   "dependencies": {
     "dotenv": "^16.0.1"
