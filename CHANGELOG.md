@@ -2,7 +2,13 @@
 
 All notable changes to the Official Dotenv VS Code extension will be documented in this file.
 
-## [Unreleased](https://github.com/dotenv-org/dotenv-vscode/compare/v0.5.4...master)
+## [Unreleased](https://github.com/dotenv-org/dotenv-vscode/compare/v0.5.5...master)
+
+## 0.5.5
+
+### Added
+
+* Added file support
 
 ## 0.5.4
 
