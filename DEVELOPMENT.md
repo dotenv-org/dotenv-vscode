@@ -1,5 +1,11 @@
 # DEVELOPMENT
 
+## Setup
+
+```
+npx dotenv-vault pull
+```
+
 ## Tests
 
 ```
