@@ -3,7 +3,7 @@
   "displayName": "Official Dotenv | Vault",
   "description": "Official Dotenv Vault. Sync your .env files, with VSCode.",
   "author": "Mot @motdotla",
-  "version": "0.5.3",
+  "version": "0.5.4",
   "license": "MIT",
   "homepage": "https://github.com/dotenv-org/dotenv-vscode",
   "icon": "dotenv.png",
@@ -50,7 +50,11 @@
           "env",
           "environment variables",
           "secrets",
-          "vault"
+          "vault",
+          "encrypt",
+          "password",
+          "api",
+          "key"
         ],
         "extensions": [
           ".env.vault",
@@ -94,7 +98,8 @@
           ".fart",
           ".vault",
           ".project",
-          ".me"
+          ".me",
+          ".secret"
         ],
         "configuration": "./language-configuration.json"
       }
