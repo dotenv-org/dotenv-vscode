@@ -42,6 +42,27 @@
   ],
   "main": "./extension.js",
   "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "dotenv-vault",
+          "title": "dotenv-vault",
+          "icon": "temp.png"
+        }
+      ]
+    },
+    "views": {
+      "dotenv-vault": [
+        {
+          "id": "dotenv-vault-variables",
+          "name": "Environment Variables"
+        },
+        {
+          "id": "dotenv-vault-history",
+          "name": "History"
+        }
+      ]
+    },
     "languages": [
       {
         "id": "dotenv",
