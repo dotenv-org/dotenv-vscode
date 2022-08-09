@@ -1,12 +1,20 @@
 # DEVELOPMENT
 
-## Local
+## Tests
+
+```
+npm test
+```
+
+## Packaging
 
 Package it locally.
 
 ```
 npm run package
 ```
+
+## Installing
 
 Install it locally.
 
