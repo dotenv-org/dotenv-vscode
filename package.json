@@ -141,7 +141,7 @@
   "scripts": {
     "lint": "standard --fix",
     "pretest": "npm run lint",
-    "test": "node ./test/runTest.js",
+    "test": "mocha test/**/*",
     "package": "npm run lint && vsce package",
     "install-package": "code --install-extension",
     "login": "vsce login",
