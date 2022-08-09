@@ -161,6 +161,11 @@
     "typescript": "^4.7.4",
     "vsce": "^2.10.0"
   },
+  "standard": {
+    "ignore": [
+      "/test/suite/examples/**"
+    ]
+  },
   "keywords": [
     "dotenv",
     "dotenv-vault",
