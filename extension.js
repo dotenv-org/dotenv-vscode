@@ -1,10 +1,7 @@
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
-const { writeHeapSnapshot } = require('v8')
 const vscode = require('vscode')
 const providers = require('./lib/providers')
-const fs = require('fs')
-const path = require('path')
 
 const DOTENV_VAULT_VERSION = '1.11.1'
 const TERMINAL_NAME = 'Dotenv'
@@ -71,7 +68,7 @@ function activate (context) {
 
   // sidebar
   // const rootPath = (vscode.workspace.workspaceFolders && (vscode.workspace.workspaceFolders.length > 0))
-	// 	? vscode.workspace.workspaceFolders[0].uri.fsPath : undefined
+  //  ? vscode.workspace.workspaceFolders[0].uri.fsPath : undefined
 
   // // context state
   // vscode.commands.executeCommand('setContext', 'dotenv.state.new', true)
@@ -79,9 +76,9 @@ function activate (context) {
 
   // // const status = vscode.commands.registerCommand('dotenv.status', function() {
   // //   const panel = vscode.window.createWebviewPanel(
-	// //     'openWebview', // Identifies the type of the webview. Used internally
-	// //     'page', // Title of the panel displayed to the user
-	// //     vscode.ViewColumn.One, // Editor column to show the new webview panel in.
+  // //     'openWebview', // Identifies the type of the webview. Used internally
+  // //     'page', // Title of the panel displayed to the user
+  // //     vscode.ViewColumn.One, // Editor column to show the new webview panel in.
   // //     { // Enable scripts in the webview
   // //       enableScripts: true //Set this to true if you want to enable Javascript.
   // //     })
@@ -117,21 +114,6 @@ function activate (context) {
 
   //   }
   // })
-}
-
-function getWebviewContent() {
-  return `<!DOCTYPE html>
-  <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Example Webview</title>
-  </head>
-  <body>
-     <h1>This works!</h1>
-    //Add some custom HTML here
-  </body>
-  </html>`
 }
 
 // commands
@@ -178,7 +160,7 @@ function dotenvVersions () {
 function dotenvWhoami () {
   const command = 'whoami'
 
-  infoMessage(command, function(yes) {
+  infoMessage(command, function (yes) {
     if (yes) {
       const terminal = getTerminal()
       terminal.sendText(`npx --yes dotenv-vault@${DOTENV_VAULT_VERSION} ${command}`)
@@ -189,7 +171,7 @@ function dotenvWhoami () {
 
 // helpers
 function commandDetails (command) {
-  switch(command) {
+  switch (command) {
     case 'new':
       return 'Create your project'
     case 'login':
@@ -214,7 +196,7 @@ function commandDetails (command) {
 }
 
 function commandDocsUrl (command) {
-  switch(command) {
+  switch (command) {
     case 'new':
       return 'https://www.dotenv.org/docs/dotenv-vault/new'
     case 'login':
@@ -242,17 +224,20 @@ function infoMessage (command, callback) {
   const msg = `$ npx dotenv-vault ${command}`
   const details = commandDetails(command)
   const docsUrl = commandDocsUrl(command)
-  const options = { detail: details, modal: true };
+  const options = { detail: details, modal: true }
 
-  vscode.window.showInformationMessage(msg, options, ...['Ok', 'Documentation']).then((result)=>{
+  vscode.window.showInformationMessage(msg, options, ...['Ok', 'Documentation']).then((result) => {
     if (result === 'Ok') {
-      callback(true)
+      const output = true
+
+      callback(output)
     } else {
       if (result === 'Documentation') {
         vscode.env.openExternal(docsUrl)
       }
 
-      callback(false)
+      const output = false
+      callback(output)
     }
   })
 }
@@ -272,7 +257,7 @@ function runCommand (terminal, command) {
 }
 
 function promptCommand (command) {
-  infoMessage(command, function(yes) {
+  infoMessage(command, function (yes) {
     if (yes) {
       const terminal = getTerminal()
       runCommand(terminal, command)
