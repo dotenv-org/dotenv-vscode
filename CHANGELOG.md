@@ -2,7 +2,16 @@
 
 All notable changes to the Official Dotenv VS Code extension will be documented in this file.
 
-## [Unreleased](https://github.com/dotenv-org/dotenv-vscode/compare/v0.5.5...master)
+## [Unreleased](https://github.com/dotenv-org/dotenv-vscode/compare/v0.6.0...master)
+
+## 0.6.0
+
+### Added
+
+* Icon in sidebar 🎉
+* Working sidebar with buttons for added convenience 🎉
+* Modal prompt before running npx dotenv-vault commands
+
 
 ## 0.5.5
 

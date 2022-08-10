@@ -6,6 +6,14 @@
 npx dotenv-vault pull
 ```
 
+## Running in Debug Mode
+
+In VSCode click `Run` > `Start Debugging`.
+
+That will open up a second VSCode that you can refresh when making changes. [see more](https://www.youtube.com/watch?v=a5DX5pQ9p5M)
+
+CMD + R to refresh the extension, after making changes.
+
 ## Tests
 
 ```
@@ -45,3 +53,12 @@ npm run publish
 
 [1] https://code.visualstudio.com/api/working-with-extensions/publishing-extension#publishing-extensions
 [2] https://marketplace.visualstudio.com/manage/publishers/dotenv
+
+## Icons
+
+List of all icons [https://code.visualstudio.com/api/references/icons-in-labels](https://code.visualstudio.com/api/references/icons-in-labels)
+List of all icons [https://microsoft.github.io/vscode-codicons/dist/codicon.html](https://microsoft.github.io/vscode-codicons/dist/codicon.html)
+
+## Inspiration
+
+[GitHub Pull Request Extension](https://github.com/microsoft/vscode-pull-request-github/blob/main/package.json)

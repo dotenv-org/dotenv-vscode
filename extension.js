@@ -1,13 +1,18 @@
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
+const { writeHeapSnapshot } = require('v8')
 const vscode = require('vscode')
 const providers = require('./lib/providers')
+const fs = require('fs')
+const path = require('path')
 
 const DOTENV_VAULT_VERSION = '1.11.1'
-const TERMINAL_NAME = 'dotenv-official'
+const TERMINAL_NAME = 'Dotenv'
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
+
+vscode.commands.executeCommand('setContext', 'dotenvNew', true)
 
 /**
  * @param {vscode.ExtensionContext} context
@@ -63,86 +68,193 @@ function activate (context) {
   context.subscriptions.push(javascriptreactHover)
   context.subscriptions.push(typescriptreactHover)
   context.subscriptions.push(vueHover)
+
+  // sidebar
+  // const rootPath = (vscode.workspace.workspaceFolders && (vscode.workspace.workspaceFolders.length > 0))
+	// 	? vscode.workspace.workspaceFolders[0].uri.fsPath : undefined
+
+  // // context state
+  // vscode.commands.executeCommand('setContext', 'dotenv.state.new', true)
+  // // vscode.commands.executeCommand('setContext', 'jsonOutlineEnabled', true)
+
+  // // const status = vscode.commands.registerCommand('dotenv.status', function() {
+  // //   const panel = vscode.window.createWebviewPanel(
+	// //     'openWebview', // Identifies the type of the webview. Used internally
+	// //     'page', // Title of the panel displayed to the user
+	// //     vscode.ViewColumn.One, // Editor column to show the new webview panel in.
+  // //     { // Enable scripts in the webview
+  // //       enableScripts: true //Set this to true if you want to enable Javascript.
+  // //     })
+  // //   return panel
+  // // })
+  // // context.subscriptions.push(status)
+  // const newView = vscode.window.registerWebviewViewProvider('dotenv.newView', {
+  //   resolveWebviewView: async function(webviewView, context, _token) {
+
+  //     const vaultExists = await vscode.workspace.fs.stat()
+
+  //     console.log('exists', vaultExists)
+
+  //     webviewView.webview.options = {
+  //       enableScripts: true, // enable js scripts
+  //     }
+
+  //     if (vaultExists) {
+  //       webviewView.webview.html = `<!DOCTYPE html>
+  //         <html>
+  //           <body>
+  //             .env.vault exists
+  //           </body>
+  //         </html>`
+  //     } else {
+  //       webviewView.webview.html = `<!DOCTYPE html>
+  //         <html>
+  //           <body>
+  //             Missing .env.vault
+  //           </body>
+  //         </html>`
+  //     }
+
+  //   }
+  // })
+}
+
+function getWebviewContent() {
+  return `<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Example Webview</title>
+  </head>
+  <body>
+     <h1>This works!</h1>
+    //Add some custom HTML here
+  </body>
+  </html>`
 }
 
 // commands
 function dotenvLogin () {
   const command = 'login'
-
-  infoMessage(command)
-  const terminal = getTerminal()
-  runCommand(terminal, command)
+  promptCommand(command)
 }
 
 function dotenvLogout () {
   const command = 'logout'
-
-  infoMessage(command)
-  const terminal = getTerminal()
-  runCommand(terminal, command)
+  promptCommand(command)
 }
 
 function dotenvNew () {
   const command = 'new'
-
-  infoMessage(command)
-  const terminal = getTerminal()
-  runCommand(terminal, command)
+  promptCommand(command)
 }
 
 function dotenvOpen () {
   const command = 'open'
-
-  infoMessage(command)
-  const terminal = getTerminal()
-  runCommand(terminal, command)
+  promptCommand(command)
 }
 
 function dotenvPull () {
   const command = 'pull'
-
-  infoMessage(command)
-  const terminal = getTerminal()
-  runCommand(terminal, command)
+  promptCommand(command)
 }
 
 function dotenvPush () {
   const command = 'push'
-
-  infoMessage(command)
-  const terminal = getTerminal()
-  runCommand(terminal, command)
+  promptCommand(command)
 }
 
 function dotenvStatus () {
   const command = 'status'
-
-  infoMessage(command)
-  const terminal = getTerminal()
-  runCommand(terminal, command)
+  promptCommand(command)
 }
 
 function dotenvVersions () {
   const command = 'versions'
-
-  infoMessage(command)
-  const terminal = getTerminal()
-  runCommand(terminal, command)
+  promptCommand(command)
 }
 
 function dotenvWhoami () {
   const command = 'whoami'
 
-  infoMessage(command)
-  const terminal = getTerminal()
-
-  terminal.sendText(`npx --yes dotenv-vault@${DOTENV_VAULT_VERSION} ${command}`)
-  terminal.show()
+  infoMessage(command, function(yes) {
+    if (yes) {
+      const terminal = getTerminal()
+      terminal.sendText(`npx --yes dotenv-vault@${DOTENV_VAULT_VERSION} ${command}`)
+      terminal.show()
+    }
+  })
 }
 
 // helpers
-function infoMessage (command) {
-  vscode.window.showInformationMessage(`Running dotenv-vault ${command}`)
+function commandDetails (command) {
+  switch(command) {
+    case 'new':
+      return 'Create your project'
+    case 'login':
+      return 'Log in to Dotenv Vault'
+    case 'logout':
+      return 'Log out of Dotenv Vault'
+    case 'open':
+      return 'Open project page'
+    case 'push':
+      return 'Push .env securely'
+    case 'pull':
+      return 'Pull .env securely'
+    case 'versions':
+      return 'List version history'
+    case 'whoami':
+      return 'Display the current logged in user'
+    case 'status':
+      return 'Check Dotenv Vault operational status'
+    default:
+      return ''
+  }
+}
+
+function commandDocsUrl (command) {
+  switch(command) {
+    case 'new':
+      return 'https://www.dotenv.org/docs/dotenv-vault/new'
+    case 'login':
+      return 'https://www.dotenv.org/docs/dotenv-vault/login'
+    case 'logout':
+      return 'https://www.dotenv.org/docs/dotenv-vault/logout'
+    case 'open':
+      return 'https://www.dotenv.org/docs/dotenv-vault/open'
+    case 'push':
+      return 'https://www.dotenv.org/docs/dotenv-vault/push'
+    case 'pull':
+      return 'https://www.dotenv.org/docs/dotenv-vault/pull'
+    case 'versions':
+      return 'https://www.dotenv.org/docs/dotenv-vault/versions'
+    case 'whoami':
+      return 'https://www.dotenv.org/docs/dotenv-vault/whoami'
+    case 'status':
+      return 'https://www.dotenv.org/docs/dotenv-vault/status'
+    default:
+      return 'https://www.dotenv.org/docs'
+  }
+}
+
+function infoMessage (command, callback) {
+  const msg = `$ npx dotenv-vault ${command}`
+  const details = commandDetails(command)
+  const docsUrl = commandDocsUrl(command)
+  const options = { detail: details, modal: true };
+
+  vscode.window.showInformationMessage(msg, options, ...['Ok', 'Documentation']).then((result)=>{
+    if (result === 'Ok') {
+      callback(true)
+    } else {
+      if (result === 'Documentation') {
+        vscode.env.openExternal(docsUrl)
+      }
+
+      callback(false)
+    }
+  })
 }
 
 function getTerminal () {
@@ -157,6 +269,15 @@ function getTerminal () {
 function runCommand (terminal, command) {
   terminal.sendText(`npx --yes dotenv-vault@${DOTENV_VAULT_VERSION} ${command} --yes`)
   terminal.show()
+}
+
+function promptCommand (command) {
+  infoMessage(command, function(yes) {
+    if (yes) {
+      const terminal = getTerminal()
+      runCommand(terminal, command)
+    }
+  })
 }
 
 // this method is called when your extension is deactivated

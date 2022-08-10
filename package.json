@@ -1,9 +1,9 @@
 {
   "name": "dotenv-vscode",
-  "displayName": "Official Dotenv | Vault",
-  "description": "Official Dotenv Vault. Sync your .env files, with VSCode.",
+  "displayName": "Dotenv Official (with Vault)",
+  "description": "Official Dotenv. Syntax highlighting, autocompletion, in-code secret peeking, and .env file syncing with Dotenv Vault.",
   "author": "Mot @motdotla",
-  "version": "0.5.5",
+  "version": "0.6.0",
   "license": "MIT",
   "homepage": "https://github.com/dotenv-org/dotenv-vscode",
   "icon": "dotenv.png",
@@ -38,31 +38,35 @@
     "onCommand:dotenv.status",
     "onCommand:dotenv.versions",
     "onCommand:dotenv.whoami",
-    "onLanguage:javascript"
+    "onLanguage:javascript",
+    "onView:dotenv.newView"
   ],
   "main": "./extension.js",
   "contributes": {
     "viewsContainers": {
       "activitybar": [
         {
-          "id": "dotenv-vault",
-          "title": "dotenv-vault",
-          "icon": "temp.png"
+          "id": "dotenv",
+          "title": "Dotenv",
+          "icon": "media/sidebar-icon.svg"
         }
       ]
     },
     "views": {
-      "dotenv-vault": [
+      "dotenv": [
         {
-          "id": "dotenv-vault-variables",
-          "name": "Environment Variables"
-        },
-        {
-          "id": "dotenv-vault-history",
-          "name": "History"
+          "id": "dotenv.view.vault",
+          "icon": "media/dotenv-icon.png",
+          "name": "Vault"
         }
       ]
     },
+    "viewsWelcome": [
+      {
+        "view": "dotenv.view.vault",
+        "contents": "Getting Started with Dotenv Vault [learn more](https://www.dotenv.org/docs/getting-started/with-dotenv-vault)\nStep 1: Create your project\n[Dotenv: new](command:dotenv.new)\nStep 2: Authenticate against it\n[Dotenv: login](command:dotenv.login)\nStep 3: View it\n[Dotenv: open](command:dotenv.open)\nThat's it! Thanks for using Dotenv Vault.\n---\nCommands [learn more](https://www.dotenv.org/docs/dotenv-vault)\n[Dotenv: push](command:dotenv.push)\n[Dotenv: pull](command:dotenv.pull)\n[Dotenv: whoami](command:dotenv.whoami)\n[Dotenv: logout](command:dotenv.logout)\n[Dotenv: versions](command:dotenv.versions)\n[Dotenv: status](command:dotenv.status)\n\nProTip: You can run any of these commands by typing 'Ctrl+Shift+P', then 'Dotenv'."
+      }
+    ],
     "languages": [
       {
         "id": "dotenv",
@@ -139,39 +143,48 @@
     "commands": [
       {
         "command": "dotenv.login",
-        "title": "dotenv login"
+        "category": "Dotenv",
+        "title": "login"
       },
       {
         "command": "dotenv.logout",
-        "title": "dotenv logout"
+        "category": "Dotenv",
+        "title": "logout"
       },
       {
         "command": "dotenv.new",
-        "title": "dotenv new"
+        "category": "Dotenv",
+        "title": "new"
       },
       {
         "command": "dotenv.open",
-        "title": "dotenv open"
+        "category": "Dotenv",
+        "title": "open"
       },
       {
         "command": "dotenv.pull",
-        "title": "dotenv pull"
+        "category": "Dotenv",
+        "title": "pull"
       },
       {
         "command": "dotenv.push",
-        "title": "dotenv push"
+        "category": "Dotenv",
+        "title": "push"
       },
       {
         "command": "dotenv.status",
-        "title": "dotenv status"
+        "category": "Dotenv",
+        "title": "status"
       },
       {
         "command": "dotenv.versions",
-        "title": "dotenv versions"
+        "category": "Dotenv",
+        "title": "versions"
       },
       {
         "command": "dotenv.whoami",
-        "title": "dotenv whoami"
+        "category": "Dotenv",
+        "title": "whoami"
       }
     ]
   },
