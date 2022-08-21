@@ -3,7 +3,7 @@
 const vscode = require('vscode')
 const providers = require('./lib/providers')
 
-const DOTENV_VAULT_VERSION = '1.11.1'
+const DOTENV_VAULT_VERSION = '1.11.2'
 const TERMINAL_NAME = 'Dotenv'
 
 // this method is called when your extension is activated
