@@ -8,7 +8,9 @@ npx dotenv-vault pull
 
 ## Running in Debug Mode
 
-In VSCode click `Run` > `Start Debugging`.
+Open this project in VSCode.
+
+Then in VSCode click `Run` > `Start Debugging`.
 
 That will open up a second VSCode that you can refresh when making changes. [see more](https://www.youtube.com/watch?v=a5DX5pQ9p5M)
 
