@@ -3,44 +3,6 @@
 const vscode = require('vscode')
 const providers = require('./lib/providers')
 const decorations = require('./lib/decorations')
-const parse = require('./lib/parse')
-const path = require('path')
-
-// **********************
-let lastSourceCode
-let patches = []
-let settingsKey = 'enable'
-
-const run = (_ctx, editor) => {
-  console.log('RUNNNN')
-  if (!editor) {
-    return
-  }
-
-  const filename = path.basename(editor.document.uri.fsPath)
-  if (!filename.startsWith('.env')) {
-    return
-  }
-
-  // const isEnabled = true // vscode.workspace.getConfiguration(settingsKey).get('enabled')
-
-  // if(!isEnabled) {
-  //   decorations.applyDecorations(_ctx, editor, [])
-  //   return
-  // }
-
-  const sourceCode = editor.document.getText()
-  // if(lastSourceCode !== sourceCode) {
-  //   console.log('sourceCode', sourceCode)
-  // }
-
-  patches = parse.main(sourceCode)
-  decorations.applyDecorations(_ctx, editor, patches)
-
-  lastSourceCode = sourceCode
-}
-
-// **********************
 
 const DOTENV_VAULT_VERSION = '1.12.0'
 const TERMINAL_NAME = 'Dotenv'
@@ -57,6 +19,7 @@ function activate (context) {
   // Use the console to output diagnostic information (console.log) and errors (console.error)
   // This line of code will only be executed once when your extension is activated
   console.log('Dotenv is active!')
+  initDecorations(context)
 
   // Commands
   const login = vscode.commands.registerCommand('dotenv.login', function () { dotenvLogin() })
@@ -105,185 +68,6 @@ function activate (context) {
   context.subscriptions.push(typescriptreactHover)
   context.subscriptions.push(vueHover)
 
-
-  console.log("decorations are active");
-  let timeoutId
-
-  run(context, vscode.window.activeTextEditor)
-
-  // Update when a file opens
-  vscode.window.onDidChangeActiveTextEditor(function(editor) {
-    run(context, editor)
-  })
-
-  // Update when a file saves
-  vscode.workspace.onWillSaveTextDocument(function(event) {
-    const openEditor = vscode.window.visibleTextEditors.filter(function(editor) { editor.document.uri === event.document.uri })[0]
-    run(context, openEditor)
-  });
-
-  vscode.workspace.onDidChangeTextDocument(function(event) {
-    if (timeoutId) {
-      clearTimeout(timeoutId)
-    }
-
-    timeoutId = setTimeout(function() {
-      const openEditor = vscode.window.visibleTextEditors.filter(function(editor) { editor.document.uri === event.document.uri})[0]
-      run(context, openEditor)
-    }, 100)
-  })
-
-    /**
-   * Any time we move anywhere around our editor, we want to trigger
-   * a decoration.
-   */
-    vscode.window.onDidChangeTextEditorSelection(function() {
-      run(context, vscode.window.activeTextEditor)
-    })
-
-  // Update if the config was changed
-  vscode.workspace.onDidChangeConfiguration(function(event) {
-    if (event.affectsConfiguration(settingsKey)) {
-      run(context, vscode.window.activeTextEditor)
-    }
-  })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  // OLD
-  // // Redactor
-  // decorations.redactor(context, vscode.window.activeTextEditor)
-  // // when a file opens
-  // vscode.window.onDidChangeActiveTextEditor((editor) => {
-  //   decorations.redactor(context, editor)
-  // })
-  // // on save
-  // vscode.workspace.onWillSaveTextDocument((event) => {
-  //   const openEditor = vscode.window.visibleTextEditors.filter((editor) => editor.document.uri === event.document.uri)[0]
-  //   decorations.redactor(context, openEditor)
-  // })
-  // // on text change
-  // vscode.workspace.onDidChangeTextDocument((event) => {
-  //   if (timeoutId) {
-  //     clearTimeout(timeoutId)
-  //   }
-
-  //   timeoutId = setTimeout(() => {
-  //     const openEditor = vscode.window.visibleTextEditors.filter((editor) => editor.document.uri === event.document.uri)[0]
-  //     decorations.redactor(context, openEditor)
-  //   }, 100)
-  // })
-  // // move around the editor with our mouse
-  // vscode.window.onDidChangeTextEditorSelection(() => {
-  //   decorations.redactor(context, vscode.window.activeTextEditor)
-  // })
-
-  // CRUFTY
-
-  // const redact = vscode.commands.registerCommand('dotenv.mask', function () {
-  //   const editor = vscode.window.activeTextEditor
-  //   if (editor) {
-  //     const document = editor.document
-
-  //     editor.edit(editBuilder => {
-  //       if (editor.selections.length === 0) {
-  //         vscode.window.showWarningMessage('No selection found')
-  //         return
-  //       }
-
-  //       const text = document.getText() // optionally pass regex to getText to select certain words
-  //       const pattern = /\w/g
-  //       const maskChar = '░'
-  //       const masked = text.replace(pattern, maskChar)
-  //       editBuilder.replace(selection, masked)
-  //     })
-  //   }
-  // })
-
-  // context.subscriptions.push(redact)
-
-  // const decorationType = vscode.window.createTextEditorDecorationType({
-  //   backgroundColor: "green",
-  //   border: "2px solid white"
-  // })
-  //
-  // function decorate(editor) {
-  //   const path = editor.document.uri.fsPath
-  //   let sourceCode = editor.document.getText()
-  //   let regex = /(console\.log)/
-  //   let decorationsArray = []
-  //   const sourceCodeArr = sourceCode.split("\n")
-  //   for (let line = 0; line < sourceCodeArr.length; line++) {
-  //     let match = sourceCodeArr[line].match(regex)
-  //     if (match !== null && match.index !== undefined) {
-  //       let range = new vscode.Range(
-  //         new vscode.Position(line, match.index),
-  //         new vscode.Position(line, match.index + match[1].length)
-  //       )
-  //       let decoration = { range };
-  //       decorationsArray.push(decoration);
-  //     }
-  //   }
-  //   editor.setDecorations(decorationType, decorationsArray)
-  // }
-  // vscode.workspace.onWillSaveTextDocument(event => {
-  //   const openEditor = vscode.window.visibleTextEditors.filter(
-  //     editor => editor.document.uri === event.document.uri
-  //   )[0]
-  //   decorate(openEditor)
-  // })
-  // let timeout = undefined
-  // let editor = vscode.window.activeTextEditor
-  // if (editor) {
-  //   triggerUpdateDecorations()
-  // }
-  // function triggerUpdateDecorations() {
-  //   if (timeout) {
-  //     clearTimeout(timeout);
-  //     timeout = undefined;
-  //   }
-  //   timeout = setTimeout(updateDecorations, 500);
-  // }
-  // function updateDecorations() {
-  //   if (!editor) {
-  //     return
-  //   }
-  //   let sourceCode = editor.document.getText()
-  //   let regex = /(console\.log)/
-
-  //   let decorationsArray = []
-
-  //   const sourceCodeArr = sourceCode.split("\n")
-
-  //   for (let line = 0; line < sourceCodeArr.length; line++) {
-  //     let match = sourceCodeArr[line].match(regex)
-
-  //     if (match !== null && match.index !== undefined) {
-  //       let range = new vscode.Range(
-  //         new vscode.Position(line, match.index),
-  //         new vscode.Position(line, match.index + match[1].length)
-  //       )
-
-  //       let decoration = { range };
-
-  //       decorationsArray.push(decoration);
-  //     }
-  //   }
-
-  //   editor.setDecorations(decorationType, decorationsArray)
-  // }
 
   // sidebar
   // const rootPath = (vscode.workspace.workspaceFolders && (vscode.workspace.workspaceFolders.length > 0))
@@ -334,6 +118,54 @@ function activate (context) {
   //   }
   // })
 }
+
+function initDecorations(context) {
+  let timeoutId
+
+  decorations.decorate(context, vscode.window.activeTextEditor)
+
+  // Update when a file opens
+  vscode.window.onDidChangeActiveTextEditor(function(editor) {
+    decorations.decorate(context, editor)
+  })
+  vscode.workspace.onDidOpenTextDocument(function(event) {
+    const openEditor = vscode.window.visibleTextEditors.filter(function(editor) { editor.document.uri === event.document.uri})[0]
+    decorations.decorate(context, openEditor)
+  })
+
+  // Update when a file saves
+  vscode.workspace.onWillSaveTextDocument(function(event) {
+    const openEditor = vscode.window.visibleTextEditors.filter(function(editor) { editor.document.uri === event.document.uri })[0]
+    decorations.decorate(context, openEditor)
+  });
+
+  // Update when text is changed
+  vscode.workspace.onDidChangeTextDocument(function(event) {
+    if (timeoutId) {
+      clearTimeout(timeoutId)
+    }
+
+    timeoutId = setTimeout(function() {
+      const openEditor = vscode.window.visibleTextEditors.filter(function(editor) { editor.document.uri === event.document.uri})[0]
+      decorations.decorate(context, openEditor)
+    }, 100)
+  })
+
+  // Update when moving around the editor
+  vscode.window.onDidChangeTextEditorSelection(function() {
+    decorations.decorate(context, vscode.window.activeTextEditor)
+  })
+
+  // Update if the config was changed
+  // vscode.workspace.onDidChangeConfiguration(function(event) {
+  //   if (event.affectsConfiguration(settingsKey)) {
+  //     decorate(context, vscode.window.activeTextEditor)
+  //   }
+  // })
+
+}
+
+
 
 // commands
 function dotenvLogin () {
