@@ -1,14 +1,4 @@
 <div align="center">
-  <p>
-    <sup>
-      <a href="https://marketplace.visualstudio.com/items?itemName=dotenv.dotenv-vscode">
-        <img src="https://raw.githubusercontent.com/dotenv-org/dotenv-vscode/master/media/install.png" width="100" alt="Install from Visual Studio Marketplace">
-      </a>
-    </sup>
-  </p>
-</div>
-
-<div align="center">
   <a href="https://docs.dotenv.org/?r=1"><img src="https://raw.githubusercontent.com/motdotla/dotenv/master/dotenv.png" alt="dotenv-vscode" width="60" height="60"></a>
   <h1>Official Dotenv for VSCode</h1>
   <h4 align="center">Auto-cloaking, auto-completion, in-code secret peeking, and more.</h4>
@@ -25,8 +15,8 @@
 
   <img src="https://img.spacergif.org/v1/spacer.gif" width="1" height="10">
 
-  <a href="https://github.com/dotenv-org/dotenv-vscode">
-    <img src="https://res.cloudinary.com/dotenv-org/image/upload/v1662069726/vscode1_vhzand.png"/>
+  <a href="https://marketplace.visualstudio.com/items?itemName=dotenv.dotenv-vscode">
+    <img src="https://res.cloudinary.com/dotenv-org/image/upload/v1662073121/vscode1_zs1nmt.png"/>
   </a>
 
   <table>
@@ -46,7 +36,8 @@
   <a href="https://github.com/dotenv-org/dotenv-vscode"><img src="https://img.shields.io/visual-studio-marketplace/v/dotenv.dotenv-vscode?label=VS%20Marketplace&logo=visual-studio-code" alt="Version"></a>
 
   <p>Bonus: You also get syntax highlighting and <a href="https://dotenv.org" target="_blank">Dotenv Vault</a>.</p>
-  <hr/>
+  <br/>
+  <br/>
 </div>
 
 ## Install
@@ -99,7 +90,7 @@ dotenv push
 dotenv pull
 ```
 
-See it in action:
+See <a href="https://dotenv.org" target="_blank">Dotenv Vault</a> in action:
 
 <img src="https://raw.githubusercontent.com/dotenv-org/dotenv-vscode/master/overview.gif">
 
