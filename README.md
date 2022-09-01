@@ -3,7 +3,7 @@
   <p>
     <sup>
       <a href="https://marketplace.visualstudio.com/items?itemName=dotenv.dotenv-vscode">
-        <img src="https://raw.githubusercontent.com/dotenv-org/dotenv-vscode/master/media/install.png" alt="Install from Visual Studio Marketplace">
+        <img src="https://raw.githubusercontent.com/dotenv-org/dotenv-vscode/master/media/install.svg" alt="Install from Visual Studio Marketplace">
       </a>
     </sup>
   </p>
