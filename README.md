@@ -1,5 +1,5 @@
 <div align="center">
-  <a href="https://docs.dotenv.org/?r=1"><img src="https://raw.githubusercontent.com/motdotla/dotenv/master/dotenv.png" alt="dotenv-vscode" width="60" height="60"></a>
+  <a href="https://docs.dotenv.org/?r=1"><img src="https://raw.githubusercontent.com/motdotla/dotenv/master/dotenv.png" alt="dotenv-vscode" width="80" height="80"></a>
   <h1>Official Dotenv for VSCode</h1>
   <h4 align="center">Auto-cloaking, auto-completion, in-code secret peeking, and more.</h4>
 
@@ -12,8 +12,6 @@
     <img src="https://img.spacergif.org/v1/spacer.gif" width="5" height="1">
     <a href="#changelog" target="_blank">Changelog</a>
   </p>
-
-  <img src="https://img.spacergif.org/v1/spacer.gif" width="1" height="10">
 
   <a href="https://marketplace.visualstudio.com/items?itemName=dotenv.dotenv-vscode">
     <img src="https://res.cloudinary.com/dotenv-org/image/upload/v1662073121/vscode1_zs1nmt.png"/>
