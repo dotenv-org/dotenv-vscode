@@ -2,8 +2,9 @@
 // Import the module and reference it with the alias vscode in your code below
 const vscode = require('vscode')
 const providers = require('./lib/providers')
+const decorations = require('./lib/decorations')
 
-const DOTENV_VAULT_VERSION = '1.11.2'
+const DOTENV_VAULT_VERSION = '1.12.0'
 const TERMINAL_NAME = 'Dotenv'
 
 // this method is called when your extension is activated
@@ -18,6 +19,7 @@ function activate (context) {
   // Use the console to output diagnostic information (console.log) and errors (console.error)
   // This line of code will only be executed once when your extension is activated
   console.log('Dotenv is active!')
+  initDecorations(context)
 
   // Commands
   const login = vscode.commands.registerCommand('dotenv.login', function () { dotenvLogin() })
@@ -65,6 +67,7 @@ function activate (context) {
   context.subscriptions.push(javascriptreactHover)
   context.subscriptions.push(typescriptreactHover)
   context.subscriptions.push(vueHover)
+
 
   // sidebar
   // const rootPath = (vscode.workspace.workspaceFolders && (vscode.workspace.workspaceFolders.length > 0))
@@ -115,6 +118,54 @@ function activate (context) {
   //   }
   // })
 }
+
+function initDecorations(context) {
+  let timeoutId
+
+  decorations.decorate(context, vscode.window.activeTextEditor)
+
+  // Update when a file opens
+  vscode.window.onDidChangeActiveTextEditor(function(editor) {
+    decorations.decorate(context, editor)
+  })
+  vscode.workspace.onDidOpenTextDocument(function(event) {
+    const openEditor = vscode.window.visibleTextEditors.filter(function(editor) { editor.document.uri === event.document.uri})[0]
+    decorations.decorate(context, openEditor)
+  })
+
+  // Update when a file saves
+  vscode.workspace.onWillSaveTextDocument(function(event) {
+    const openEditor = vscode.window.visibleTextEditors.filter(function(editor) { editor.document.uri === event.document.uri })[0]
+    decorations.decorate(context, openEditor)
+  });
+
+  // Update when text is changed
+  vscode.workspace.onDidChangeTextDocument(function(event) {
+    if (timeoutId) {
+      clearTimeout(timeoutId)
+    }
+
+    timeoutId = setTimeout(function() {
+      const openEditor = vscode.window.visibleTextEditors.filter(function(editor) { editor.document.uri === event.document.uri})[0]
+      decorations.decorate(context, openEditor)
+    }, 100)
+  })
+
+  // Update when moving around the editor
+  vscode.window.onDidChangeTextEditorSelection(function() {
+    decorations.decorate(context, vscode.window.activeTextEditor)
+  })
+
+  // Update if the config was changed
+  // vscode.workspace.onDidChangeConfiguration(function(event) {
+  //   if (event.affectsConfiguration(settingsKey)) {
+  //     decorate(context, vscode.window.activeTextEditor)
+  //   }
+  // })
+
+}
+
+
 
 // commands
 function dotenvLogin () {
