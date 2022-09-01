@@ -12,8 +12,11 @@
 
 <div align="center">
   <img src="https://res.cloudinary.com/dotenv-org/image/upload/v1662069726/vscode1_vhzand.png"/>
+  <hr/>
   <img src="https://res.cloudinary.com/dotenv-org/image/upload/v1662069727/vscode2_h5hh42.png"/>
+  <hr/>
   <img src="https://res.cloudinary.com/dotenv-org/image/upload/v1662069727/vscode3_fhioqq.png"/>
+  <hr/>
   <img src="https://res.cloudinary.com/dotenv-org/image/upload/v1662069726/vscode4_ejlsh9.png"/>
 </div>
 
