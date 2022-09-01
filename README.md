@@ -12,6 +12,23 @@
 
 <div align="center">
   <h1>Official Dotenv for VSCode</h1>
+  <h4 align="center">Auto-cloaking, auto-completion, in-code secret peeking, and more.</h4>
+
+  <p align="center">
+    <a href="#install">Install</a>
+    <img src="https://img.spacergif.org/v1/spacer.gif" width="5" height="1">
+    <a href="#usage">Usage</a>
+    <img src="https://img.spacergif.org/v1/spacer.gif" width="5" height="1">
+    <a href="#how-it-works">How It Works</a>
+    <img src="https://img.spacergif.org/v1/spacer.gif" width="5" height="1">
+    <a href="#commands" target="_blank">Commands</a>
+    <img src="https://img.spacergif.org/v1/spacer.gif" width="5" height="1">
+    <a href="#health" target="_blank">Health</a>
+    <img src="https://img.spacergif.org/v1/spacer.gif" width="5" height="1">
+    <a href="#changelog">Changelog</a>
+  </p>
+
+  <img src="https://img.spacergif.org/v1/spacer.gif" width="1" height="10">
 
   <img src="https://res.cloudinary.com/dotenv-org/image/upload/v1662069726/vscode1_vhzand.png"/>
 
@@ -23,8 +40,12 @@
       <td>
         <img src="https://res.cloudinary.com/dotenv-org/image/upload/v1662069727/vscode3_fhioqq.png"/>
       </td>
+    </tr>
+    <tr>
       <td>
         <img src="https://res.cloudinary.com/dotenv-org/image/upload/v1662069726/vscode4_ejlsh9.png"/>
+      </td>
+      <td>
       </td>
     </tr>
   </table>
@@ -39,23 +60,6 @@
   <br>
 </h1>
 
-<h4 align="center">Official Dotenv. Syntax highlighting, autocompletion, in-code secret peeking, and .env file syncing with Dotenv Vault.</h4>
-
-<p align="center">
-  <a href="#install">Install</a>
-  <img src="https://img.spacergif.org/v1/spacer.gif" width="5" height="1">
-  <a href="#usage">Usage</a>
-  <img src="https://img.spacergif.org/v1/spacer.gif" width="5" height="1">
-  <a href="#how-it-works">How It Works</a>
-  <img src="https://img.spacergif.org/v1/spacer.gif" width="5" height="1">
-  <a href="#commands" target="_blank">Commands</a>
-  <img src="https://img.spacergif.org/v1/spacer.gif" width="5" height="1">
-  <a href="#health" target="_blank">Health</a>
-  <img src="https://img.spacergif.org/v1/spacer.gif" width="5" height="1">
-  <a href="#changelog">Changelog</a>
-</p>
-
-<img src="https://img.spacergif.org/v1/spacer.gif" width="1" height="10">
 
 <a href="https://github.com/dotenv-org/dotenv-vscode"><img src="https://raw.githubusercontent.com/dotenv-org/dotenv-vscode/master/dotenv-vscode.png"></a>
 
