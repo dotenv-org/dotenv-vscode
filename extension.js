@@ -68,7 +68,6 @@ function activate (context) {
   context.subscriptions.push(typescriptreactHover)
   context.subscriptions.push(vueHover)
 
-
   // sidebar
   // const rootPath = (vscode.workspace.workspaceFolders && (vscode.workspace.workspaceFolders.length > 0))
   //  ? vscode.workspace.workspaceFolders[0].uri.fsPath : undefined
@@ -119,40 +118,40 @@ function activate (context) {
   // })
 }
 
-function initDecorations(context) {
+function initDecorations (context) {
   let timeoutId
 
   decorations.decorate(context, vscode.window.activeTextEditor)
 
   // Update when a file opens
-  vscode.window.onDidChangeActiveTextEditor(function(editor) {
+  vscode.window.onDidChangeActiveTextEditor(function (editor) {
     decorations.decorate(context, editor)
   })
-  vscode.workspace.onDidOpenTextDocument(function(event) {
-    const openEditor = vscode.window.visibleTextEditors.filter(function(editor) { editor.document.uri === event.document.uri})[0]
+  vscode.workspace.onDidOpenTextDocument(function (event) {
+    const openEditor = vscode.window.visibleTextEditors.filter(function (editor) { return editor.document.uri === event.document.uri })[0]
     decorations.decorate(context, openEditor)
   })
 
   // Update when a file saves
-  vscode.workspace.onWillSaveTextDocument(function(event) {
-    const openEditor = vscode.window.visibleTextEditors.filter(function(editor) { editor.document.uri === event.document.uri })[0]
+  vscode.workspace.onWillSaveTextDocument(function (event) {
+    const openEditor = vscode.window.visibleTextEditors.filter(function (editor) { return editor.document.uri === event.document.uri })[0]
     decorations.decorate(context, openEditor)
-  });
+  })
 
   // Update when text is changed
-  vscode.workspace.onDidChangeTextDocument(function(event) {
+  vscode.workspace.onDidChangeTextDocument(function (event) {
     if (timeoutId) {
       clearTimeout(timeoutId)
     }
 
-    timeoutId = setTimeout(function() {
-      const openEditor = vscode.window.visibleTextEditors.filter(function(editor) { editor.document.uri === event.document.uri})[0]
+    timeoutId = setTimeout(function () {
+      const openEditor = vscode.window.visibleTextEditors.filter(function (editor) { return editor.document.uri === event.document.uri })[0]
       decorations.decorate(context, openEditor)
     }, 100)
   })
 
   // Update when moving around the editor
-  vscode.window.onDidChangeTextEditorSelection(function() {
+  vscode.window.onDidChangeTextEditorSelection(function () {
     decorations.decorate(context, vscode.window.activeTextEditor)
   })
 
@@ -162,10 +161,7 @@ function initDecorations(context) {
   //     decorate(context, vscode.window.activeTextEditor)
   //   }
   // })
-
 }
-
-
 
 // commands
 function dotenvLogin () {
