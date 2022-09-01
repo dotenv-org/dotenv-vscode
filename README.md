@@ -2,14 +2,16 @@
 
   <p>
     <sup>
-      <a href="https://marketplace.visualstudio.com/items?itemName=dotenv.dotenv-vscode">Install for VSCode</a>
+      <a href="https://marketplace.visualstudio.com/items?itemName=dotenv.dotenv-vscode">
+        <img src="https://raw.githubusercontent.com/dotenv-org/dotenv-vscode/master/media/install.png" alt="Install from Visual Studio Marketplace">
+      </a>
     </sup>
   </p>
 
 </div>
 
 <h1 align="center">
-  <a href="https://docs.dotenv.org?r=1"><img src="https://raw.githubusercontent.com/motdotla/dotenv/master/dotenv.png" alt="dotenv-vscode" width="80" height="80" ></a>
+  <a href="https://docs.dotenv.org?r=1"><img src="https://raw.githubusercontent.com/motdotla/dotenv/master/dotenv.svg" alt="dotenv-vscode" width="80" height="80" ></a>
   <br>
   Dotenv Official (with Vault) for VSCode <a href="https://twitter.com/intent/tweet?text=dotenv-vscode%20-%20sync%20environment%20variables%2C%20securely%20https%3A%2F%2Fgithub.com%2Fdotenv-org%2Fdotenv-vscode&hashtags=dotenv"><img src="https://img.shields.io/badge/Tweet--lightgrey?logo=twitter&style=social" alt="Tweet" height="20"/></a>
   <br>
