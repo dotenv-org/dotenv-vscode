@@ -2,14 +2,14 @@
   <p>
     <sup>
       <a href="https://marketplace.visualstudio.com/items?itemName=dotenv.dotenv-vscode">
-        <img src="https://raw.githubusercontent.com/dotenv-org/dotenv-vscode/master/media/install.svg" alt="Install from Visual Studio Marketplace">
+        <img src="https://raw.githubusercontent.com/dotenv-org/dotenv-vscode/master/media/install.png" width="100" alt="Install from Visual Studio Marketplace">
       </a>
     </sup>
   </p>
 </div>
 
 <div align="center">
-  <a href="https://docs.dotenv.org/?r=1"><img src="https://raw.githubusercontent.com/motdotla/dotenv/master/dotenv.svg" alt="dotenv-vscode" width="60" height="60"></a>
+  <a href="https://docs.dotenv.org/?r=1"><img src="https://raw.githubusercontent.com/motdotla/dotenv/master/dotenv.png" alt="dotenv-vscode" width="60" height="60"></a>
   <h1>Official Dotenv for VSCode</h1>
   <h4 align="center">Auto-cloaking, auto-completion, in-code secret peeking, and more.</h4>
 
