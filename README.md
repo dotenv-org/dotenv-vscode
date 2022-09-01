@@ -11,13 +11,25 @@
 </div>
 
 <div align="center">
+  <h1>Official Dotenv for VSCode</h1>
+
   <img src="https://res.cloudinary.com/dotenv-org/image/upload/v1662069726/vscode1_vhzand.png"/>
+
+  <table>
+    <tr>
+      <td>
+        <img src="https://res.cloudinary.com/dotenv-org/image/upload/v1662069727/vscode2_h5hh42.png"/>
+      </td>
+      <td>
+        <img src="https://res.cloudinary.com/dotenv-org/image/upload/v1662069727/vscode3_fhioqq.png"/>
+      </td>
+      <td>
+        <img src="https://res.cloudinary.com/dotenv-org/image/upload/v1662069726/vscode4_ejlsh9.png"/>
+      </td>
+    </tr>
+  </table>
+
   <hr/>
-  <img src="https://res.cloudinary.com/dotenv-org/image/upload/v1662069727/vscode2_h5hh42.png"/>
-  <hr/>
-  <img src="https://res.cloudinary.com/dotenv-org/image/upload/v1662069727/vscode3_fhioqq.png"/>
-  <hr/>
-  <img src="https://res.cloudinary.com/dotenv-org/image/upload/v1662069726/vscode4_ejlsh9.png"/>
 </div>
 
 <h1 align="center">
