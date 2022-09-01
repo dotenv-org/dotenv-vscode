@@ -51,7 +51,7 @@ Install using VSCode Command Palette
 
 ### Auto-cloaking
 
-It just works. Open your .env files in VSCode, and they will now be auto-cloaked.
+It just works. Open your .env files in VSCode, and they will now be auto-cloaked. Click on the value you want to un-cloak.
 
 ### Auto-completion
 
