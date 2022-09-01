@@ -67,7 +67,9 @@ It just works. Open your .env files in VSCode, they will now be syntax highlight
 
 ### Vault
 
-<a href="https://dotenv.org/">Read about Vault at www.dotenv.org</a>. Sync your .env files quickly & securely. Stop sharing them over insecure channels like Slack and email, and never lose an important .env file again.</p>
+Vault lets you sync your .env files quickly & securely. Stop sharing them over insecure channels like Slack and email, and never lose an important .env file again.
+
+<a href="https://dotenv.org/">Read more about Vault</a>. 
 
 Usage is similar to git. Run `CMD+Shift+P` (or `Ctrl+Shift+P`) and start typing `dotenv`.
 
