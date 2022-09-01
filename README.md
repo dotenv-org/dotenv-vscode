@@ -1,3 +1,13 @@
+<div align="center">
+
+  <p>
+    <sup>
+      <a href="https://marketplace.visualstudio.com/items?itemName=dotenv.dotenv-vscode">Install for VSCode</a>
+    </sup>
+  </p>
+
+</div>
+
 <h1 align="center">
   <a href="https://docs.dotenv.org?r=1"><img src="https://raw.githubusercontent.com/motdotla/dotenv/master/dotenv.png" alt="dotenv-vscode" width="80" height="80" ></a>
   <br>
