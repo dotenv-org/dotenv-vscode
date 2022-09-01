@@ -119,3 +119,7 @@ See [CHANGELOG](CHANGELOG.md)
 ## Acknowledgements
 
 - [Iron Geek](https://github.com/IronGeek/vscode-env)
+
+<br/>
+<br/>
+Thank you for using Dotenv.
