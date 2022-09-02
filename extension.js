@@ -4,17 +4,11 @@ const vscode = require('vscode')
 const providers = require('./lib/providers')
 const decorations = require('./lib/decorations')
 
-const DOTENV_VAULT_VERSION = '1.12.0'
+const DOTENV_VAULT_VERSION = '1.11.2'
 const TERMINAL_NAME = 'Dotenv'
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
-
-vscode.commands.executeCommand('setContext', 'dotenvNew', true)
-
-/**
- * @param {vscode.ExtensionContext} context
- */
 function activate (context) {
   // Use the console to output diagnostic information (console.log) and errors (console.error)
   // This line of code will only be executed once when your extension is activated

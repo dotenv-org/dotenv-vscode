@@ -38,8 +38,7 @@
     "onCommand:dotenv.status",
     "onCommand:dotenv.versions",
     "onCommand:dotenv.whoami",
-    "onLanguage:javascript",
-    "onView:dotenv.newView"
+    "*"
   ],
   "main": "./extension.js",
   "contributes": {
