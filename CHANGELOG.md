@@ -8,7 +8,7 @@ All notable changes to the Official Dotenv VS Code extension will be documented 
 
 ### Changed
 
-* Fixed activation event in event of opening `.env` file first
+* Fixed activation event in event of opening `.env` file first ([23](https://github.com/dotenv-org/dotenv-vscode/pull/23))
 
 ## 0.7.0
 
