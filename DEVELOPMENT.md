@@ -61,6 +61,14 @@ npm run publish
 List of all icons [https://code.visualstudio.com/api/references/icons-in-labels](https://code.visualstudio.com/api/references/icons-in-labels)
 List of all icons [https://microsoft.github.io/vscode-codicons/dist/codicon.html](https://microsoft.github.io/vscode-codicons/dist/codicon.html)
 
+## List of keywords
+
+Find list of keywords here: https://stackoverflow.com/questions/10834765/where-to-find-a-list-of-scopes-for-sublime2-or-textmate
+
+## Reference Theme Colors
+
+https://stackoverflow.com/questions/47117621/how-to-get-the-vscode-theme-color-in-vscode-extensions
+
 ## Inspiration
 
 [GitHub Pull Request Extension](https://github.com/microsoft/vscode-pull-request-github/blob/main/package.json)
