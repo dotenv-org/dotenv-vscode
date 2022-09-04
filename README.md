@@ -116,31 +116,6 @@ Visit [dotenv.org/docs](https://www.dotenv.org/docs/dotenv-vault?r=1) for detail
 
 See [CHANGELOG](CHANGELOG.md)
 
-## Acknowledgements
-
-- [Iron Geek](https://github.com/IronGeek/vscode-env)
-
 <br/>
 <br/>
 Thank you for using Dotenv.
-
-```
-{
-  "language": "dotenv",
-  "scopeName": "source.dotenv",
-  "path": "./syntaxes/dotenv.tmLanguage.json"
-},
-```
-
-```
-"configurationDefaults": [
-  "[abc]": {
-    "workbench.editor.restoreViewState": false,
-    "workbench.editor.languageDetection": false
-  },
-  "[dotenv]": {
-    "workbench.editor.restoreViewState": false,
-    "workbench.editor.languageDetection": false
-  }
-],
-```

@@ -2,7 +2,13 @@
 
 All notable changes to the Official Dotenv VS Code extension will be documented in this file.
 
-## [Unreleased](https://github.com/dotenv-org/dotenv-vscode/compare/v0.7.1...master)
+## [Unreleased](https://github.com/dotenv-org/dotenv-vscode/compare/v0.8.0...master)
+
+## 0.8.0
+
+### Added
+
+* Added auto-cloaking toggle at top of .env file 🎉 ([24](https://github.com/dotenv-org/dotenv-vscode/pull/24))
 
 ## 0.7.1
 
