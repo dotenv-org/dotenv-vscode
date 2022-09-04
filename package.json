@@ -3,12 +3,12 @@
   "displayName": "Dotenv Official (with Vault)",
   "description": "Official Dotenv. Syntax highlighting, autocompletion, in-code secret peeking, and .env file syncing with Dotenv Vault.",
   "author": "Mot @motdotla",
-  "version": "0.7.1",
+  "version": "0.8.0",
   "license": "MIT",
   "homepage": "https://github.com/dotenv-org/dotenv-vscode",
   "icon": "dotenv.png",
   "galleryBanner": {
-    "color": "#3E1661",
+    "color": "#000000",
     "theme": "dark"
   },
   "qna": false,
