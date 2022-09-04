@@ -29,19 +29,22 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:dotenv.login",
-    "onCommand:dotenv.logout",
-    "onCommand:dotenv.new",
-    "onCommand:dotenv.open",
-    "onCommand:dotenv.pull",
-    "onCommand:dotenv.push",
-    "onCommand:dotenv.status",
-    "onCommand:dotenv.versions",
-    "onCommand:dotenv.whoami",
     "*"
   ],
   "main": "./extension.js",
   "contributes": {
+    "configuration": {
+      "type": "object",
+      "title": "Dotenv Settings",
+      "properties": {
+        "dotenv.enableAutocloaking": {
+          "scope": "resource",
+          "type": "boolean",
+          "default": true,
+          "description": "Enables auto-cloaking for your .env files"
+        }
+      }
+    },
     "viewsContainers": {
       "activitybar": [
         {
@@ -78,13 +81,17 @@
           "encrypt",
           "password",
           "api",
-          "key"
+          "key",
+          "cloak",
+          "mask",
+          "hide",
+          "blur"
         ],
         "extensions": [
+          ".env",
           ".env.vault",
           ".env.me",
           ".flaskenv",
-          ".env",
           ".env-sample",
           ".env.example",
           ".env.local",
@@ -129,14 +136,14 @@
           ".env.sync",
           ".sync"
         ],
-        "configuration": "./language-configuration.json"
+        "configuration": "./syntaxes/language-configuration.json"
       }
     ],
     "grammars": [
       {
         "language": "dotenv",
         "scopeName": "source.dotenv",
-        "path": "./syntaxes/dotenv.tmLanguage.json"
+        "path": "./syntaxes/dotenv-simple.tmLanguage.json"
       }
     ],
     "commands": [
@@ -184,6 +191,11 @@
         "command": "dotenv.whoami",
         "category": "Dotenv",
         "title": "whoami"
+      },
+      {
+        "command": "dotenv.toggleAutocloaking",
+        "category": "Dotenv",
+        "title": "Toggle auto-cloaking"
       }
     ]
   },
@@ -230,9 +242,13 @@
     "development",
     "productivity",
     "secrets",
-    "sync"
+    "sync",
+    "cloak",
+    "mask",
+    "hide",
+    "blur"
   ],
   "dependencies": {
-    "dotenv": "^16.0.1"
+    "dotenv": "^16.0.2"
   }
 }
