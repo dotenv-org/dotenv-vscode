@@ -14,13 +14,13 @@
   </p>
 
   <a href="https://marketplace.visualstudio.com/items?itemName=dotenv.dotenv-vscode">
-    <img src="https://res.cloudinary.com/dotenv-org/image/upload/v1662073121/vscode1_zs1nmt.png"/>
+    <img src="https://res.cloudinary.com/dotenv-org/image/upload/v1662332129/dotenv-vscode_wvfyxn.png"/>
   </a>
 
   <table>
     <tr>
       <td>
-        <a href="https://res.cloudinary.com/dotenv-org/image/upload/v1662069727/vscode2_h5hh42.png"><img src="https://res.cloudinary.com/dotenv-org/image/upload/v1662069727/vscode2_h5hh42.png"/></a>
+        <a href="https://res.cloudinary.com/dotenv-org/image/upload/v1662332054/autocloaking_uutakf.png"><img src="https://res.cloudinary.com/dotenv-org/image/upload/v1662332054/autocloaking_uutakf.png"/></a>
       </td>
       <td>
         <a href="https://res.cloudinary.com/dotenv-org/image/upload/v1662069727/vscode3_fhioqq.png"><img src="https://res.cloudinary.com/dotenv-org/image/upload/v1662069727/vscode3_fhioqq.png"/></a>
@@ -51,7 +51,7 @@ Install using VSCode Command Palette
 
 ### Auto-cloaking
 
-It just works. Open your .env files in VSCode, and they will now be auto-cloaked. Click on the value you want to un-cloak.
+It just works. Open your .env files in VSCode, and they will now be auto-cloaked. Click the 'Toggle auto-cloaking' link at the top of your .env file to toggle it off.
 
 ### Auto-completion
 
