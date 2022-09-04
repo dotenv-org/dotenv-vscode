@@ -1,5 +1,3 @@
-const vscode = require('vscode')
-
 const autocloaking = require('./lib/autocloaking')
 const autocompletion = require('./lib/autocompletion')
 const commands = require('./lib/commands')
