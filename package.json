@@ -134,7 +134,8 @@
           ".env.secret",
           ".env.secrets",
           ".env.sync",
-          ".sync"
+          ".sync",
+          ".flaskenv"
         ],
         "configuration": "./syntaxes/language-configuration.json"
       }
