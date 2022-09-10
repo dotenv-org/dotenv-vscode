@@ -2,7 +2,13 @@
 
 All notable changes to the Official Dotenv VS Code extension will be documented in this file.
 
-## [Unreleased](https://github.com/dotenv-org/dotenv-vscode/compare/v0.8.2...master)
+## [Unreleased](https://github.com/dotenv-org/dotenv-vscode/compare/v0.9.0...master)
+
+## 0.9.0
+
+### Added
+
+* Added support for `.flaskenv` files
 
 ## 0.8.2
 
