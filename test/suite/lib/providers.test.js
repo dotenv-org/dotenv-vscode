@@ -53,4 +53,26 @@ describe('providers', function () {
       assert.equal(result.contents[0], 'World')
     })
   })
+
+  describe('#rubyHover', function () {
+    it('returns undefined at 0 line', async function () {
+      const rubyFile = path.join(__dirname, '..', 'examples', 'ruby.rb')
+      const document = await vscode.workspace.openTextDocument(rubyFile)
+      const position = new vscode.Position(0, 9)
+
+      const result = providers.rubyHover.provideHover(document, position)
+
+      assert.equal(result, undefined)
+    })
+
+    it('returns value at 0 line and correct position', async function () {
+      const rubyFile = path.join(__dirname, '..', 'examples', 'ruby.rb')
+      const document = await vscode.workspace.openTextDocument(rubyFile)
+      const position = new vscode.Position(0, 13)
+
+      const result = providers.rubyHover.provideHover(document, position)
+
+      assert.equal(result.contents[0], 'World')
+    })
+  })
 })

@@ -59,7 +59,7 @@ Start typing `process.env.` and your cursor will be populated with auto-completi
 
 ### In-code secret peeking
 
-Hover your mouse over a `process.env.SECRET_KEY`, and you will be able to peek at its value without having to open your .env file.
+Hover your mouse over a `process.env.SECRET_KEY` or a `ENV["SECRET_KEY"]`, and you will be able to peek at its value without having to open your .env file.
 
 ### Syntax Highlighting
 
