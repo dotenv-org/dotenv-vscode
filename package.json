@@ -3,7 +3,7 @@
   "displayName": "Dotenv Official +Vault",
   "description": "Official Dotenv. Auto-cloaking, auto-completion, in-code secret peeking, and more.",
   "author": "Mot @motdotla",
-  "version": "0.9.0",
+  "version": "0.10.0",
   "license": "MIT",
   "homepage": "https://github.com/dotenv-org/dotenv-vscode",
   "icon": "dotenv.png",

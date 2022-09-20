@@ -2,7 +2,11 @@
 
 All notable changes to the Official Dotenv VS Code extension will be documented in this file.
 
-## [Unreleased](https://github.com/dotenv-org/dotenv-vscode/compare/v0.9.0...master)
+## [Unreleased](https://github.com/dotenv-org/dotenv-vscode/compare/v0.10.0...master)
+
+## 0.10.0
+
+* Added support for Ruby ENV secret peeking
 
 ## 0.9.0
 
