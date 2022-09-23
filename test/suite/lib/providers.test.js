@@ -26,7 +26,7 @@ describe('providers', function () {
 
       const result = providers.javascriptCompletion.provideCompletionItems(document, position)
 
-      assert.equal(result[0].insertText, 'HELLO')
+      assert.equal(result[0].insertText, '.HELLO')
       assert.equal(result[0].label.label, 'HELLO')
       assert.equal(result[0].label.detail, ' World')
     })
