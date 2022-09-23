@@ -2,7 +2,13 @@
 
 All notable changes to the Official Dotenv VS Code extension will be documented in this file.
 
-## [Unreleased](https://github.com/dotenv-org/dotenv-vscode/compare/v0.10.0...master)
+## [Unreleased](https://github.com/dotenv-org/dotenv-vscode/compare/v0.10.1...master)
+
+## 0.10.1
+
+### Changed
+
+* Place ENV completion items to top of list [#32](https://github.com/dotenv-org/dotenv-vscode/pull/32)
 
 ## 0.10.0
 
