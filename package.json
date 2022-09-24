@@ -3,7 +3,7 @@
   "displayName": "Dotenv Official +Vault",
   "description": "Official Dotenv. Auto-cloaking, auto-completion, in-code secret peeking, and more.",
   "author": "Mot @motdotla",
-  "version": "0.10.0",
+  "version": "0.10.1",
   "license": "MIT",
   "homepage": "https://github.com/dotenv-org/dotenv-vscode",
   "icon": "dotenv.png",
@@ -35,13 +35,13 @@
   "contributes": {
     "configuration": {
       "type": "object",
-      "title": "Dotenv Settings",
+      "title": "Dotenv Official +Vault",
       "properties": {
         "dotenv.enableAutocloaking": {
           "scope": "resource",
           "type": "boolean",
           "default": true,
-          "description": "Enables auto-cloaking for your .env files"
+          "description": "Enable auto-cloaking for your .env files"
         }
       }
     },
