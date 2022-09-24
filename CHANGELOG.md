@@ -2,13 +2,20 @@
 
 All notable changes to the Official Dotenv VS Code extension will be documented in this file.
 
-## [Unreleased](https://github.com/dotenv-org/dotenv-vscode/compare/v0.10.2...master)
+## [Unreleased](https://github.com/dotenv-org/dotenv-vscode/compare/v0.10.3...master)
+
+## 0.10.3
+
+### Added
+
+* Added support for Ruby autocomplete [#35](https://github.com/dotenv-org/dotenv-vscode/pull/35)
 
 ## 0.10.2
 
 ### Changed
 
-* Added support for Ruby autocomplete [#35](https://github.com/dotenv-org/dotenv-vscode/pull/35)
+* Various bug patches around autocloaking 🐞
+
 ## 0.10.1
 
 ### Changed
