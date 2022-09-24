@@ -99,4 +99,26 @@ describe('providers', function () {
       assert.equal(result.contents[0], 'World')
     })
   })
+
+  describe('#pythonHover', function () {
+    it('returns undefined at 0 line', async function () {
+      const pythonFile = path.join(__dirname, '..', 'examples', 'python.py')
+      const document = await vscode.workspace.openTextDocument(pythonFile)
+      const position = new vscode.Position(0, 19)
+
+      const result = providers.pythonHover.provideHover(document, position)
+
+      assert.equal(result, undefined)
+    })
+
+    it('returns value at 0 line and correct position', async function () {
+      const pythonFile = path.join(__dirname, '..', 'examples', 'python.py')
+      const document = await vscode.workspace.openTextDocument(pythonFile)
+      const position = new vscode.Position(0, 23)
+
+      const result = providers.pythonHover.provideHover(document, position)
+
+      assert.equal(result.contents[0], 'World')
+    })
+  })
 })
