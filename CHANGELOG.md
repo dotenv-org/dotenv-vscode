@@ -2,7 +2,13 @@
 
 All notable changes to the Official Dotenv VS Code extension will be documented in this file.
 
-## [Unreleased](https://github.com/dotenv-org/dotenv-vscode/compare/v0.11.0...master)
+## [Unreleased](https://github.com/dotenv-org/dotenv-vscode/compare/v0.11.1...master)
+
+## 0.11.1
+
+### Changed
+
+* Use workspacePath to load `.env` file [#37](https://github.com/dotenv-org/dotenv-vscode/pull/37)
 
 ## 0.11.0
 
