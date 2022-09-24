@@ -12,7 +12,7 @@ describe('providers', function () {
     it('returns undefined at line 0 and wrong position', async function () {
       const javascriptFile = path.join(__dirname, '..', 'examples', 'javascript.js')
       const document = await vscode.workspace.openTextDocument(javascriptFile)
-      const position = new vscode.Position(0, 22)
+      const position = new vscode.Position(1, 22)
 
       const result = providers.javascriptCompletion.provideCompletionItems(document, position)
 
@@ -36,7 +36,7 @@ describe('providers', function () {
     it('returns undefined at line 0 and wrong position', async function () {
       const rubyFile = path.join(__dirname, '..', 'examples', 'ruby.rb')
       const document = await vscode.workspace.openTextDocument(rubyFile)
-      const position = new vscode.Position(0, 7)
+      const position = new vscode.Position(1, 7)
 
       const result = providers.rubyCompletion.provideCompletionItems(document, position)
 
@@ -51,6 +51,30 @@ describe('providers', function () {
       const result = providers.rubyCompletion.provideCompletionItems(document, position)
 
       assert.equal(result[0].insertText, '["HELLO"')
+      assert.equal(result[0].label.label, 'HELLO')
+      assert.equal(result[0].label.detail, ' World')
+    })
+  })
+
+  describe('#pythonCompletion', function () {
+    it('returns undefined at line 0 and wrong position', async function () {
+      const pythonFile = path.join(__dirname, '..', 'examples', 'python.py')
+      const document = await vscode.workspace.openTextDocument(pythonFile)
+      const position = new vscode.Position(1, 19)
+
+      const result = providers.pythonCompletion.provideCompletionItems(document, position)
+
+      assert.equal(result, undefined)
+    })
+
+    it('returns value at line 1 and correct position', async function () {
+      const pythonFile = path.join(__dirname, '..', 'examples', 'python.py')
+      const document = await vscode.workspace.openTextDocument(pythonFile)
+      const position = new vscode.Position(1, 21)
+
+      const result = providers.pythonCompletion.provideCompletionItems(document, position)
+
+      assert.equal(result[0].insertText, '("HELLO"')
       assert.equal(result[0].label.label, 'HELLO')
       assert.equal(result[0].label.detail, ' World')
     })
