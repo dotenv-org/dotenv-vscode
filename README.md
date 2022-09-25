@@ -51,7 +51,7 @@ Install using VSCode Command Palette
 
 ### Auto-cloaking
 
-It just works. Open your .env files in VSCode, and they will now be auto-cloaked. Click the 'Toggle auto-cloaking' link at the top of your .env file to toggle it off.
+It just works. Open your `.env` files in VSCode, and they will be auto-cloaked. Click the 'Toggle auto-cloaking' link at the top of your `.env` file to toggle it off.
 
 <img src="https://res.cloudinary.com/dotenv-org/image/upload/v1664140588/toggle_itemcq.gif">
 
@@ -59,9 +59,13 @@ It just works. Open your .env files in VSCode, and they will now be auto-cloaked
 
 ### Auto-completion
 
-Start typing `process.env.` and your cursor will be populated with auto-completion options directly from your .env file.
+Start typing `process.env.` and your cursor will be populated with auto-completion options directly from your .env file. Multiple languages supported.
 
-<a href="https://res.cloudinary.com/dotenv-org/image/upload/v1662069727/vscode3_fhioqq.png"><img src="https://res.cloudinary.com/dotenv-org/image/upload/v1662069727/vscode3_fhioqq.png" width="400"/></a>
+* JavaScript/TypeScript/NodeJS
+* Ruby
+* Python
+
+<img src="https://res.cloudinary.com/dotenv-org/image/upload/v1664140944/autocomplete_snic6t.gif"/>
 
 <hr/>
 
