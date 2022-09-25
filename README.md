@@ -53,7 +53,9 @@ Install using VSCode Command Palette
 
 It just works. Open your .env files in VSCode, and they will now be auto-cloaked. Click the 'Toggle auto-cloaking' link at the top of your .env file to toggle it off.
 
-<a href="https://res.cloudinary.com/dotenv-org/image/upload/v1662332054/autocloaking_uutakf.png"><img src="https://res.cloudinary.com/dotenv-org/image/upload/v1662332054/autocloaking_uutakf.png" width="400"/></a>
+<img src="https://res.cloudinary.com/dotenv-org/image/upload/v1664140588/toggle_itemcq.gif">
+
+<hr/>
 
 ### Auto-completion
 
@@ -61,15 +63,21 @@ Start typing `process.env.` and your cursor will be populated with auto-completi
 
 <a href="https://res.cloudinary.com/dotenv-org/image/upload/v1662069727/vscode3_fhioqq.png"><img src="https://res.cloudinary.com/dotenv-org/image/upload/v1662069727/vscode3_fhioqq.png" width="400"/></a>
 
+<hr/>
+
 ### In-code secret peeking
 
 Hover your mouse over a `process.env.SECRET_KEY` or a `ENV["SECRET_KEY"]`, and you will be able to peek at its value without having to open your .env file.
 
 <a href="https://res.cloudinary.com/dotenv-org/image/upload/v1662069726/vscode4_ejlsh9.png"><img src="https://res.cloudinary.com/dotenv-org/image/upload/v1662069726/vscode4_ejlsh9.png"/></a>
 
+<hr/>
+
 ### Syntax Highlighting
 
 It just works. Open your .env files in VSCode, they will now be syntax highlighted.
+
+<hr/>
 
 ### Vault
 
