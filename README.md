@@ -49,9 +49,9 @@ Install using VSCode Command Palette
 
 ## Usage
 
-### Auto-cloaking
-
 <a href="https://res.cloudinary.com/dotenv-org/image/upload/v1662332054/autocloaking_uutakf.png"><img src="https://res.cloudinary.com/dotenv-org/image/upload/v1662332054/autocloaking_uutakf.png" width="300" align="right"/></a>
+
+### Auto-cloaking
 
 It just works. Open your .env files in VSCode, and they will now be auto-cloaked. Click the 'Toggle auto-cloaking' link at the top of your .env file to toggle it off.
 
