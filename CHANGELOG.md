@@ -9,6 +9,7 @@ All notable changes to the Official Dotenv VS Code extension will be documented 
 ### Added
 
 * Added support for Python autocomplete and secret peeking[#38](https://github.com/dotenv-org/dotenv-vscode/pull/38)
+
 ## 0.11.1
 
 ### Changed
