@@ -77,6 +77,12 @@ Hover your mouse over a `process.env.SECRET_KEY` or a `ENV["SECRET_KEY"]`, and y
 
 <img src="https://res.cloudinary.com/dotenv-org/image/upload/v1664141169/secret-peeking_byzwex.gif"/>
 
+Multiple languages supported.
+
+* JavaScript/TypeScript/NodeJS
+* Ruby
+* Python
+
 <hr/>
 
 ### Syntax Highlighting
