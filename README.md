@@ -59,7 +59,7 @@ It just works. Open your `.env` files in VSCode, and they will be auto-cloaked. 
 
 ### Auto-completion
 
-Start typing `process.env.` and your cursor will be populated with auto-completion options directly from your .env file.
+Start typing `process.env.` (or language specific env statement) and your cursor will be populated with auto-completion options directly from your .env file.
 
 <img src="https://res.cloudinary.com/dotenv-org/image/upload/v1664140944/autocomplete_snic6t.gif"/>
 
@@ -68,6 +68,7 @@ Multiple languages supported.
 * JavaScript/TypeScript/NodeJS
 * Ruby
 * Python
+* PHP
 
 <hr/>
 
@@ -82,6 +83,7 @@ Multiple languages supported.
 * JavaScript/TypeScript/NodeJS
 * Ruby
 * Python
+* PHP
 
 <hr/>
 
