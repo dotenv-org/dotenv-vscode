@@ -124,6 +124,73 @@ describe('providers', function () {
     })
   })
 
+  describe('#phpCompletion', function () {
+    it('returns undefined at line 0 and wrong position for $_ENV[] format', async function () {
+      const phpFile = path.join(__dirname, '..', 'examples', 'php.php')
+      const document = await vscode.workspace.openTextDocument(phpFile)
+      const position = new vscode.Position(3, 15)
+
+      const result = providers.phpCompletion.provideCompletionItems(document, position)
+
+      assert.equal(result, undefined)
+    })
+
+    it('returns value at line 1 and correct position for $_ENV[] format', async function () {
+      const phpFile = path.join(__dirname, '..', 'examples', 'php.php')
+      const document = await vscode.workspace.openTextDocument(phpFile)
+      const position = new vscode.Position(3, 17)
+
+      const result = providers.phpCompletion.provideCompletionItems(document, position)
+
+      assert.equal(result[0].insertText, '["HELLO"')
+      assert.equal(result[0].label.label, 'HELLO')
+      assert.equal(result[0].label.detail, ' World')
+    })
+
+    it('returns undefined at line 0 and wrong position for $_SERVER[] format', async function () {
+      const phpFile = path.join(__dirname, '..', 'examples', 'php.php')
+      const document = await vscode.workspace.openTextDocument(phpFile)
+      const position = new vscode.Position(4, 18)
+
+      const result = providers.phpCompletion.provideCompletionItems(document, position)
+
+      assert.equal(result, undefined)
+    })
+
+    it('returns value at line 1 and correct position for $_SERVER[] format', async function () {
+      const phpFile = path.join(__dirname, '..', 'examples', 'php.php')
+      const document = await vscode.workspace.openTextDocument(phpFile)
+      const position = new vscode.Position(4, 20)
+
+      const result = providers.phpCompletion.provideCompletionItems(document, position)
+
+      assert.equal(result[0].insertText, '["HELLO"')
+      assert.equal(result[0].label.label, 'HELLO')
+      assert.equal(result[0].label.detail, ' World')
+    })
+
+    it('returns undefined at line 0 and wrong position for getenv() format', async function () {
+      const phpFile = path.join(__dirname, '..', 'examples', 'php.php')
+      const document = await vscode.workspace.openTextDocument(phpFile)
+      const position = new vscode.Position(5, 16)
+
+      const result = providers.phpGetEnvCompletion.provideCompletionItems(document, position)
+
+      assert.equal(result, undefined)
+    })
+
+    it('returns value at line 1 and correct position for getenv() format', async function () {
+      const phpFile = path.join(__dirname, '..', 'examples', 'php.php')
+      const document = await vscode.workspace.openTextDocument(phpFile)
+      const position = new vscode.Position(5, 18)
+
+      const result = providers.phpGetEnvCompletion.provideCompletionItems(document, position)
+
+      assert.equal(result[0].insertText, '("HELLO"')
+      assert.equal(result[0].label.label, 'HELLO')
+      assert.equal(result[0].label.detail, ' World')
+    })
+  })
   describe('#javascriptHover', function () {
     it('returns undefined at 0 line', async function () {
       const javascriptFile = path.join(__dirname, '..', 'examples', 'javascript.js')
@@ -225,6 +292,68 @@ describe('providers', function () {
       const position = new vscode.Position(2, 18)
 
       const result = providers.pythonHover.provideHover(document, position)
+
+      assert.equal(result.contents[0], 'World')
+    })
+  })
+
+  describe('#phpHover', function () {
+    it('returns undefined at 0 line for $_ENV[] format', async function () {
+      const phpFile = path.join(__dirname, '..', 'examples', 'php.php')
+      const document = await vscode.workspace.openTextDocument(phpFile)
+      const position = new vscode.Position(0, 15)
+
+      const result = providers.phpHover.provideHover(document, position)
+
+      assert.equal(result, undefined)
+    })
+
+    it('returns value at 0 line and correct position for $_ENV[] format', async function () {
+      const phpFile = path.join(__dirname, '..', 'examples', 'php.php')
+      const document = await vscode.workspace.openTextDocument(phpFile)
+      const position = new vscode.Position(0, 20)
+
+      const result = providers.phpHover.provideHover(document, position)
+
+      assert.equal(result.contents[0], 'World')
+    })
+
+    it('returns undefined at 0 line for $_SERVER[] format', async function () {
+      const phpFile = path.join(__dirname, '..', 'examples', 'php.php')
+      const document = await vscode.workspace.openTextDocument(phpFile)
+      const position = new vscode.Position(1, 17)
+
+      const result = providers.phpHover.provideHover(document, position)
+
+      assert.equal(result, undefined)
+    })
+
+    it('returns value at 0 line and correct position for $_SERVER[] format', async function () {
+      const phpFile = path.join(__dirname, '..', 'examples', 'php.php')
+      const document = await vscode.workspace.openTextDocument(phpFile)
+      const position = new vscode.Position(1, 22)
+
+      const result = providers.phpHover.provideHover(document, position)
+
+      assert.equal(result.contents[0], 'World')
+    })
+
+    it('returns undefined at 0 line for getenv() format', async function () {
+      const phpFile = path.join(__dirname, '..', 'examples', 'php.php')
+      const document = await vscode.workspace.openTextDocument(phpFile)
+      const position = new vscode.Position(2, 16)
+
+      const result = providers.phpHover.provideHover(document, position)
+
+      assert.equal(result, undefined)
+    })
+
+    it('returns value at 0 line and correct position for getenv() format', async function () {
+      const phpFile = path.join(__dirname, '..', 'examples', 'php.php')
+      const document = await vscode.workspace.openTextDocument(phpFile)
+      const position = new vscode.Position(2, 22)
+
+      const result = providers.phpHover.provideHover(document, position)
 
       assert.equal(result.contents[0], 'World')
     })
