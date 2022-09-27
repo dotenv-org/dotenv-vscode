@@ -78,6 +78,7 @@ Multiple languages supported.
 * Ruby
 * Python
 * PHP
+* Go
 
 <hr/>
 
@@ -93,6 +94,7 @@ Multiple languages supported.
 * Ruby
 * Python
 * PHP
+* Go
 
 <hr/>
 
