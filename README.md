@@ -55,6 +55,15 @@ It just works. Open your `.env` files in VSCode, and they will be auto-cloaked. 
 
 <img src="https://res.cloudinary.com/dotenv-org/image/upload/v1664140588/toggle_itemcq.gif">
 
+Multiple .env file types supported.
+
+* .env
+* .env.vault
+* .env.me
+* .env.example
+* .env.*
+* .flaskenv
+
 <hr/>
 
 ### Auto-completion
