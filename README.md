@@ -1,5 +1,5 @@
 <div align="center">
-  <a href="https://docs.dotenv.org/?r=1"><img src="https://raw.githubusercontent.com/motdotla/dotenv/master/dotenv.png" alt="dotenv-vscode" width="80" height="80"></a>
+  <a href="https://docs.dotenv.org/?r=8"><img src="https://raw.githubusercontent.com/motdotla/dotenv/master/dotenv.png" alt="dotenv-vscode" width="80" height="80"></a>
   <h1>Official Dotenv for VSCode</h1>
   <h4 align="center">Auto-cloaking, auto-completion, in-code secret peeking, and more.</h4>
 
@@ -133,7 +133,7 @@ See <a href="https://dotenv.org" target="_blank">Dotenv Vault</a> in action:
 
 <img src="https://raw.githubusercontent.com/dotenv-org/dotenv-vscode/master/overview.gif">
 
-Visit [dotenv.org/docs](https://www.dotenv.org/docs/security/overview?r=1) to learn more.
+Visit [dotenv.org/docs](https://www.dotenv.org/docs/security/overview?r=8) to learn more.
 
 ## Commands
 
@@ -149,7 +149,7 @@ dotenv whoami    Display the current logged in user
 dotenv status    Check dotenv-vault operational status
 ```
 
-Visit [dotenv.org/docs](https://www.dotenv.org/docs/dotenv-vault?r=1) for details per command.
+Visit [dotenv.org/docs](https://www.dotenv.org/docs/dotenv-vault?r=8) for details per command.
 
 ## CHANGELOG
 
