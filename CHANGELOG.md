@@ -2,7 +2,13 @@
 
 All notable changes to the Official Dotenv VS Code extension will be documented in this file.
 
-## [Unreleased](https://github.com/dotenv-org/dotenv-vscode/compare/v0.14.1...master)
+## [Unreleased](https://github.com/dotenv-org/dotenv-vscode/compare/v0.15.0...master)
+
+## 0.15.0
+
+### Added
+
+* Added support for Java autocomplete and secret peeking[#58](https://github.com/dotenv-org/dotenv-vscode/pull/58)
 
 ## 0.14.1
 

@@ -216,6 +216,30 @@ describe('providers', function () {
     })
   })
 
+  describe('#goCompletion', function () {
+    it('returns undefined at line 0 and wrong position', async function () {
+      const javaFile = path.join(__dirname, '..', 'examples', 'java.java')
+      const document = await vscode.workspace.openTextDocument(javaFile)
+      const position = new vscode.Position(1, 8)
+
+      const result = providers.javaCompletion.provideCompletionItems(document, position)
+
+      assert.equal(result, undefined)
+    })
+
+    it('returns value at line 1 and correct position', async function () {
+      const javaFile = path.join(__dirname, '..', 'examples', 'java.java')
+      const document = await vscode.workspace.openTextDocument(javaFile)
+      const position = new vscode.Position(1, 11)
+
+      const result = providers.javaCompletion.provideCompletionItems(document, position)
+
+      assert.equal(result[0].insertText, '("HELLO"')
+      assert.equal(result[0].label.label, 'HELLO')
+      assert.equal(result[0].label.detail, ' World')
+    })
+  })
+
   describe('#javascriptHover', function () {
     it('returns undefined at 0 line', async function () {
       const javascriptFile = path.join(__dirname, '..', 'examples', 'javascript.js')
@@ -401,6 +425,28 @@ describe('providers', function () {
       const position = new vscode.Position(0, 13)
 
       const result = providers.goHover.provideHover(document, position)
+
+      assert.equal(result.contents[0], 'World')
+    })
+  })
+
+  describe('#javaHover', function () {
+    it('returns undefined at 0 line', async function () {
+      const javaFile = path.join(__dirname, '..', 'examples', 'java.java')
+      const document = await vscode.workspace.openTextDocument(javaFile)
+      const position = new vscode.Position(0, 9)
+
+      const result = providers.javaHover.provideHover(document, position)
+
+      assert.equal(result, undefined)
+    })
+
+    it('returns value at 0 line and correct position', async function () {
+      const javaFile = path.join(__dirname, '..', 'examples', 'java.java')
+      const document = await vscode.workspace.openTextDocument(javaFile)
+      const position = new vscode.Position(0, 16)
+
+      const result = providers.javaHover.provideHover(document, position)
 
       assert.equal(result.contents[0], 'World')
     })
