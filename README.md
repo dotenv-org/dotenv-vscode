@@ -79,6 +79,7 @@ Multiple languages supported.
 * Python
 * PHP
 * Go
+* Java
 
 <hr/>
 
@@ -95,6 +96,7 @@ Multiple languages supported.
 * Python
 * PHP
 * Go
+* Java
 
 <hr/>
 
