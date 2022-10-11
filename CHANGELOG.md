@@ -2,7 +2,13 @@
 
 All notable changes to the Official Dotenv VS Code extension will be documented in this file.
 
-## [Unreleased](https://github.com/dotenv-org/dotenv-vscode/compare/v0.15.0...master)
+## [Unreleased](https://github.com/dotenv-org/dotenv-vscode/compare/v0.16.0...master)
+
+## 0.16.0
+
+### Added
+
+* Added support for C# autocomplete and secret peeking[#59](https://github.com/dotenv-org/dotenv-vscode/pull/59)
 
 ## 0.15.0
 

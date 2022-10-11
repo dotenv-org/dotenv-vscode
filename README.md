@@ -80,6 +80,7 @@ Multiple languages supported.
 * PHP
 * Go
 * Java
+* C#
 
 <hr/>
 
@@ -97,6 +98,7 @@ Multiple languages supported.
 * PHP
 * Go
 * Java
+* C#
 
 <hr/>
 
