@@ -81,6 +81,7 @@ Multiple languages supported.
 * Go
 * Java
 * C#
+* .NET
 
 <hr/>
 
@@ -99,6 +100,7 @@ Multiple languages supported.
 * Go
 * Java
 * C#
+* .NET
 
 <hr/>
 
