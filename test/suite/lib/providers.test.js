@@ -288,6 +288,30 @@ describe('providers', function () {
     })
   })
 
+  describe('#rustCompletion', function () {
+    it('returns undefined at line 0 and wrong position', async function () {
+      const rustFile = path.join(__dirname, '..', 'examples', 'rust.rs')
+      const document = await vscode.workspace.openTextDocument(rustFile)
+      const position = new vscode.Position(1, 12)
+
+      const result = providers.rustCompletion.provideCompletionItems(document, position)
+
+      assert.equal(result, undefined)
+    })
+
+    it('returns value at line 1 and correct position', async function () {
+      const rustFile = path.join(__dirname, '..', 'examples', 'rust.rs')
+      const document = await vscode.workspace.openTextDocument(rustFile)
+      const position = new vscode.Position(1, 14)
+
+      const result = providers.rustCompletion.provideCompletionItems(document, position)
+
+      assert.equal(result[0].insertText, '("HELLO"')
+      assert.equal(result[0].label.label, 'HELLO')
+      assert.equal(result[0].label.detail, ' World')
+    })
+  })
+
   describe('#javascriptHover', function () {
     it('returns undefined at 0 line', async function () {
       const javascriptFile = path.join(__dirname, '..', 'examples', 'javascript.js')
@@ -539,6 +563,28 @@ describe('providers', function () {
       const position = new vscode.Position(2, 12)
 
       const result = providers.csharpHover.provideHover(document, position)
+
+      assert.equal(result.contents[0], 'World')
+    })
+  })
+
+  describe('#rustHover', function () {
+    it('returns undefined at 0 line', async function () {
+      const rustFile = path.join(__dirname, '..', 'examples', 'rust.rs')
+      const document = await vscode.workspace.openTextDocument(rustFile)
+      const position = new vscode.Position(0, 12)
+
+      const result = providers.rustHover.provideHover(document, position)
+
+      assert.equal(result, undefined)
+    })
+
+    it('returns value at 0 line and correct position', async function () {
+      const rustFile = path.join(__dirname, '..', 'examples', 'rust.rs')
+      const document = await vscode.workspace.openTextDocument(rustFile)
+      const position = new vscode.Position(0, 16)
+
+      const result = providers.rustHover.provideHover(document, position)
 
       assert.equal(result.contents[0], 'World')
     })
