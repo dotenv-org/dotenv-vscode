@@ -264,6 +264,30 @@ describe('providers', function () {
     })
   })
 
+  describe('#dotNetCompletion', function () {
+    it('returns undefined at line 0 and wrong position', async function () {
+      const csharpFile = path.join(__dirname, '..', 'examples', 'csharp.cs')
+      const document = await vscode.workspace.openTextDocument(csharpFile)
+      const position = new vscode.Position(3, 6)
+
+      const result = providers.dotNetCompletion.provideCompletionItems(document, position)
+
+      assert.equal(result, undefined)
+    })
+
+    it('returns value at line 1 and correct position', async function () {
+      const csharpFile = path.join(__dirname, '..', 'examples', 'csharp.cs')
+      const document = await vscode.workspace.openTextDocument(csharpFile)
+      const position = new vscode.Position(3, 8)
+
+      const result = providers.dotNetCompletion.provideCompletionItems(document, position)
+
+      assert.equal(result[0].insertText, '["HELLO"')
+      assert.equal(result[0].label.label, 'HELLO')
+      assert.equal(result[0].label.detail, ' World')
+    })
+  })
+
   describe('#javascriptHover', function () {
     it('returns undefined at 0 line', async function () {
       const javascriptFile = path.join(__dirname, '..', 'examples', 'javascript.js')
@@ -491,6 +515,28 @@ describe('providers', function () {
       const csharpFile = path.join(__dirname, '..', 'examples', 'csharp.cs')
       const document = await vscode.workspace.openTextDocument(csharpFile)
       const position = new vscode.Position(0, 37)
+
+      const result = providers.csharpHover.provideHover(document, position)
+
+      assert.equal(result.contents[0], 'World')
+    })
+  })
+
+  describe('#dotNetHover', function () {
+    it('returns undefined at 0 line', async function () {
+      const csharpFile = path.join(__dirname, '..', 'examples', 'csharp.cs')
+      const document = await vscode.workspace.openTextDocument(csharpFile)
+      const position = new vscode.Position(2, 6)
+
+      const result = providers.csharpHover.provideHover(document, position)
+
+      assert.equal(result, undefined)
+    })
+
+    it('returns value at 0 line and correct position', async function () {
+      const csharpFile = path.join(__dirname, '..', 'examples', 'csharp.cs')
+      const document = await vscode.workspace.openTextDocument(csharpFile)
+      const position = new vscode.Position(2, 12)
 
       const result = providers.csharpHover.provideHover(document, position)
 
