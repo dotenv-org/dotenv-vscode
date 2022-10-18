@@ -81,7 +81,6 @@ Multiple languages supported.
 * Go
 * Java
 * C#
-* .NET
 * Rust
 
 <hr/>
@@ -101,7 +100,6 @@ Multiple languages supported.
 * Go
 * Java
 * C#
-* .NET
 * Rust
 
 <hr/>
