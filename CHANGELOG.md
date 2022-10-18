@@ -2,7 +2,13 @@
 
 All notable changes to the Official Dotenv VS Code extension will be documented in this file.
 
-## [Unreleased](https://github.com/dotenv-org/dotenv-vscode/compare/v0.18.0...master)
+## [Unreleased](https://github.com/dotenv-org/dotenv-vscode/compare/v0.19.0...master)
+
+## 0.19.0
+
+### Removed
+
+* Remove support for .NET dotenv lib [#61](https://github.com/dotenv-org/dotenv-vscode/pull/61)
 
 ## 0.18.0
 
