@@ -265,7 +265,7 @@ describe('providers', function () {
   })
 
   describe('#rustCompletion', function () {
-    it('returns undefined at line 0 and wrong position', async function () {
+    it('returns undefined at line 0 and wrong position with var format', async function () {
       const rustFile = path.join(__dirname, '..', 'examples', 'rust.rs')
       const document = await vscode.workspace.openTextDocument(rustFile)
       const position = new vscode.Position(1, 12)
@@ -275,10 +275,32 @@ describe('providers', function () {
       assert.equal(result, undefined)
     })
 
-    it('returns value at line 1 and correct position', async function () {
+    it('returns value at line 1 and correct position with var format', async function () {
       const rustFile = path.join(__dirname, '..', 'examples', 'rust.rs')
       const document = await vscode.workspace.openTextDocument(rustFile)
       const position = new vscode.Position(1, 14)
+
+      const result = providers.rustCompletion.provideCompletionItems(document, position)
+
+      assert.equal(result[0].insertText, '("HELLO"')
+      assert.equal(result[0].label.label, 'HELLO')
+      assert.equal(result[0].label.detail, ' World')
+    })
+
+    it('returns undefined at line 0 and wrong position with var_os format', async function () {
+      const rustFile = path.join(__dirname, '..', 'examples', 'rust.rs')
+      const document = await vscode.workspace.openTextDocument(rustFile)
+      const position = new vscode.Position(3, 15)
+
+      const result = providers.rustCompletion.provideCompletionItems(document, position)
+
+      assert.equal(result, undefined)
+    })
+
+    it('returns value at line 1 and correct position with var_os format', async function () {
+      const rustFile = path.join(__dirname, '..', 'examples', 'rust.rs')
+      const document = await vscode.workspace.openTextDocument(rustFile)
+      const position = new vscode.Position(3, 17)
 
       const result = providers.rustCompletion.provideCompletionItems(document, position)
 
@@ -523,7 +545,7 @@ describe('providers', function () {
   })
 
   describe('#rustHover', function () {
-    it('returns undefined at 0 line', async function () {
+    it('returns undefined at 0 line with var format', async function () {
       const rustFile = path.join(__dirname, '..', 'examples', 'rust.rs')
       const document = await vscode.workspace.openTextDocument(rustFile)
       const position = new vscode.Position(0, 12)
@@ -533,10 +555,30 @@ describe('providers', function () {
       assert.equal(result, undefined)
     })
 
-    it('returns value at 0 line and correct position', async function () {
+    it('returns value at 0 line and correct position with var format', async function () {
       const rustFile = path.join(__dirname, '..', 'examples', 'rust.rs')
       const document = await vscode.workspace.openTextDocument(rustFile)
       const position = new vscode.Position(0, 16)
+
+      const result = providers.rustHover.provideHover(document, position)
+
+      assert.equal(result.contents[0], 'World')
+    })
+
+    it('returns undefined at 0 line with var_os format', async function () {
+      const rustFile = path.join(__dirname, '..', 'examples', 'rust.rs')
+      const document = await vscode.workspace.openTextDocument(rustFile)
+      const position = new vscode.Position(2, 12)
+
+      const result = providers.rustHover.provideHover(document, position)
+
+      assert.equal(result, undefined)
+    })
+
+    it('returns value at 0 line and correct position with var_os format', async function () {
+      const rustFile = path.join(__dirname, '..', 'examples', 'rust.rs')
+      const document = await vscode.workspace.openTextDocument(rustFile)
+      const position = new vscode.Position(2, 22)
 
       const result = providers.rustHover.provideHover(document, position)
 
