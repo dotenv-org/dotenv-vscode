@@ -4,6 +4,12 @@ All notable changes to the Official Dotenv VS Code extension will be documented 
 
 ## [Unreleased](https://github.com/dotenv-org/dotenv-vscode/compare/v0.19.0...master)
 
+## 0.20.0
+
+### Added
+
+* Added suport for `var_os` in Rust [#72](https://github.com/dotenv-org/dotenv-vscode/pull/72)
+
 ## 0.19.0
 
 ### Removed
