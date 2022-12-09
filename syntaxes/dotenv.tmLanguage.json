@@ -63,19 +63,19 @@
       "match": "(\\$\\{)(.*)(\\})",
       "captures": {
         "1": {
-          "name": "keyword.interpolation.open.dotenv"
+          "name": "keyword.interpolation.begin.dotenv"
         },
         "2": {
           "name": "variable.interpolation.dotenv"
         },
         "3": {
-          "name": "keyword.interpolation.close.dotenv"
+          "name": "keyword.interpolation.end.dotenv"
         }
       }
     },
     "escape-characters": {
       "comment": "Escape characters",
-      "match": "\\\\[nrtfb\"'\\\\]|Z\\\\u[0123456789ABCDEF]{4}",
+      "match": "\\\\[nrtfb\"'\\\\]|\\\\u[0123456789ABCDEF]{4}",
       "name": "constant.character.escape.dotenv"
     },
     "double-quoted-string": {
