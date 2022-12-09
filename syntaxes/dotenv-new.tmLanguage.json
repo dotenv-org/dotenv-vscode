@@ -1,17 +1,3 @@
-/*
-  DONE: 
-    - Full line comments
-    - Keys with/without export
-    - Values
-      - Double quoted strings with interpolation
-      - Variable interpolation
-      - Comments at the end of values
-      - Single quoted strings (no interpolation or escapes)
-  TODO: 
-    - Multi-line values
-    - inline comments end strings
-
-*/
 {
   "scopeName": "source.dotenv",
   "patterns": [
