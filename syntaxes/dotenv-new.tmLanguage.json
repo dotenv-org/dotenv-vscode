@@ -6,12 +6,12 @@
       - Double quoted strings with interpolation
       - Variable interpolation
       - Comments at the end of values
+      - Single quoted strings (no interpolation or escapes)
   TODO: 
-      - Single quoted strings with no interpolation
-      - Multi-line values
-      - Escape characters in double quotes
-*/
+    - Multi-line values
+    - inline comments end strings
 
+*/
 {
   "scopeName": "source.dotenv",
   "patterns": [
@@ -22,7 +22,7 @@
       "1": {
         "patterns": [
           {
-            "include": "#line comment"
+            "include": "#line-comment"
           }
         ] 
       }
@@ -45,10 +45,13 @@
         "3": {
           "patterns": [
             {
-              "include": "#line comment"
+              "include": "#line-comment"
             },
             {
-              "include": "#double quoted string"
+              "include": "#double-quoted-string"
+            },
+            {
+              "include": "#single-quoted-string"
             },
             {
               "include": "#interpolation"
@@ -64,7 +67,7 @@
       "comment" : "env variable",
       "match": "[a-zA-Z_]+[a-zA-Z0-9_]*"
     },
-    "line comment": {
+    "line-comment": {
       "comment": "Comment",
       "match": "#.*$",
       "name": "comment.line.dotenv"
@@ -84,7 +87,12 @@
         }
       }
     },
-    "double quoted string": {
+    "escape-characters": {
+      "comment": "Escape characters",
+      "match": "\\\\[nrtfb\"'\\\\]|Z\\\\u[0123456789ABCDEF]{4}",
+      "name": "constant.character.escape.dotenv"
+    },
+    "double-quoted-string": {
       "comment": "Double Quoted String",
       "match": "\"(.*)\"",
       "name": "string.quoted.double.dotenv",
@@ -93,10 +101,16 @@
           "patterns": [
             {
               "include": "#interpolation"
-            }
+            },
+            { "include": "#escape-characters"}
           ]
         }
       }
+    },
+    "single-quoted-string": {
+      "comment": "Single Quoted String",
+      "match": "'(.*)'",
+      "name": "string.quoted.single.dotenv"
     },
     "key": {
       "comment": "Key",
@@ -115,6 +129,5 @@
         }
       }
     }
-
   }
 }
