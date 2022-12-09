@@ -29,6 +29,7 @@
           "name": "keyword.operator.assignment.dotenv"
         },
         "3": {
+          "name": "property.value.dotenv",
           "patterns": [
             {
               "include": "#line-comment"
