@@ -2,7 +2,7 @@
 
 All notable changes to the Official Dotenv VS Code extension will be documented in this file.
 
-## [Unreleased](https://github.com/dotenv-org/dotenv-vscode/compare/v0.19.0...master)
+## [Unreleased](https://github.com/dotenv-org/dotenv-vscode/compare/v0.21.0...master)
 
 ## 0.21.0
 
@@ -11,7 +11,6 @@ All notable changes to the Official Dotenv VS Code extension will be documented 
 * [#74](https://github.com/dotenv-org/dotenv-vscode/pull/74)
 * Improved syntax highlighting for .env files
 * Added more .env extensions that should auto-change the vscode langauge identifier to dotenv
-
 
 ## 0.20.0
 
