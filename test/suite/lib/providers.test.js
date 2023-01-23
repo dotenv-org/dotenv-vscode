@@ -310,6 +310,30 @@ describe('providers', function () {
     })
   })
 
+  describe('#dartCompletion', function () {
+    it('returns undefined at line 0 and wrong position', async function () {
+      const dartFile = path.join(__dirname, '..', 'examples', 'dart.dart')
+      const document = await vscode.workspace.openTextDocument(dartFile)
+      const position = new vscode.Position(1, 21)
+
+      const result = providers.dartCompletion.provideCompletionItems(document, position)
+
+      assert.equal(result, undefined)
+    })
+
+    it('returns value at line 1 and correct position', async function () {
+      const dartFile = path.join(__dirname, '..', 'examples', 'dart.dart')
+      const document = await vscode.workspace.openTextDocument(dartFile)
+      const position = new vscode.Position(1, 23)
+
+      const result = providers.dartCompletion.provideCompletionItems(document, position)
+
+      assert.equal(result[0].insertText, '("HELLO"')
+      assert.equal(result[0].label.label, 'HELLO')
+      assert.equal(result[0].label.detail, ' World')
+    })
+  })
+
   describe('#javascriptHover', function () {
     it('returns undefined at 0 line', async function () {
       const javascriptFile = path.join(__dirname, '..', 'examples', 'javascript.js')
@@ -581,6 +605,28 @@ describe('providers', function () {
       const position = new vscode.Position(2, 22)
 
       const result = providers.rustHover.provideHover(document, position)
+
+      assert.equal(result.contents[0], 'World')
+    })
+  })
+
+  describe('#dartHover', function () {
+    it('returns undefined at 0 line with var format', async function () {
+      const dartFile = path.join(__dirname, '..', 'examples', 'dart.dart')
+      const document = await vscode.workspace.openTextDocument(dartFile)
+      const position = new vscode.Position(0, 21)
+
+      const result = providers.dartHover.provideHover(document, position)
+
+      assert.equal(result, undefined)
+    })
+
+    it('returns value at 0 line and correct position', async function () {
+      const dartFile = path.join(__dirname, '..', 'examples', 'dart.dart')
+      const document = await vscode.workspace.openTextDocument(dartFile)
+      const position = new vscode.Position(0, 27)
+
+      const result = providers.dartHover.provideHover(document, position)
 
       assert.equal(result.contents[0], 'World')
     })

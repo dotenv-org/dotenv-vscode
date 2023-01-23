@@ -138,6 +138,7 @@
           ".env.previous",
           ".env.staging.previous",
           ".env.production.previous",
+          ".env.fat",
           ".fart",
           ".vault",
           ".project",
