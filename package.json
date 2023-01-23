@@ -91,12 +91,7 @@
           "cloak",
           "mask",
           "hide",
-          "blur",
-          "javascript",
-          "nodejs",
-          "ruby",
-          "python",
-          "php"
+          "blur"
         ],
         "extensions": [
           ".env",
