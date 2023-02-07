@@ -10,10 +10,11 @@ All notable changes to the Official Dotenv VS Code extension will be documented 
 
 * [#78](https://github.com/dotenv-org/dotenv-vscode/pull/78)
 * Added autocomplete and hover support for dart.
+* Added autocomplete and hover support for kotlin.
 * Added .env.fat to list of files that will automatically be configured for dotEnv syntax highlighting.
 
 ### Fixed
-* Issue where creating a new file and selecting javascript/ruby/python/php language but highlithing would be in .env style resolved.
+* Issue where creating a new file and selecting javascript/ruby/python/php language but highlithing would be in .env style resolved. [#66](https://github.com/dotenv-org/dotenv-vscode/issues/66), [#63](https://github.com/dotenv-org/dotenv-vscode/issues/63)
 
 ## 0.21.0
 
