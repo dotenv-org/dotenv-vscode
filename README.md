@@ -14,7 +14,7 @@
   </p>
 
   <a href="https://marketplace.visualstudio.com/items?itemName=dotenv.dotenv-vscode">
-    <img src="https://res.cloudinary.com/dotenv-org/image/upload/v1662332129/dotenv-vscode_wvfyxn.png"/>
+    <img src="https://res.cloudinary.com/dotenv-org/image/upload/v1679517963/dotenv-official_eiww2o.png"/>
   </a>
 
   <table>
