@@ -2,8 +2,16 @@
 
 All notable changes to the Official Dotenv VS Code extension will be documented in this file.
 
-## [Unreleased](https://github.com/dotenv-org/dotenv-vscode/compare/v0.21.0...master)
+## [Unreleased](https://github.com/dotenv-org/dotenv-vscode/compare/v0.22.0...master)
 
+## 0.23.0
+
+### Added
+
+* Added autocomplete and hover support for elixir. [#48](https://github.com/dotenv-org/dotenv-vscode/issues/48)
+
+### Fixed
+* Issue where autocloaking would overwrite other tokenColorCustomization settings resolved [#79](https://github.com/dotenv-org/dotenv-vscode/issues/79)
 ## 0.22.0
 
 ### Added
