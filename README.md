@@ -1,22 +1,17 @@
+# dotenv-vscode
+
+#### Syntax highlighting, auto-cloaking, auto-completion, and in-code secret peeking.
+
+* [Install](#install)
+* [Usage](#usage)
+* [Commands](#commands)
+* [Changelog](#changelog)
+
+<a href="https://marketplace.visualstudio.com/items?itemName=dotenv.dotenv-vscode">
+<img src="https://res.cloudinary.com/dotenv-org/image/upload/v1679527751/dotenv-vscode_ilezvb.png"/>
+</a>
+
 <div align="center">
-  <a href="https://dotenv.org/docs?r=8"><img src="https://raw.githubusercontent.com/motdotla/dotenv/master/dotenv.png" alt="dotenv-vscode" width="80" height="80"></a>
-  <h1>dotenv-vscode</h1>
-  <h4 align="center">Syntax highlighting, auto-cloaking, auto-completion, and in-code secret peeking.</h4>
-
-  <p align="center">
-    <a href="#install">Install</a>
-    <img src="https://img.spacergif.org/v1/spacer.gif" width="5" height="1">
-    <a href="#usage">Usage</a>
-    <img src="https://img.spacergif.org/v1/spacer.gif" width="5" height="1">
-    <a href="#commands" target="_blank">Commands</a>
-    <img src="https://img.spacergif.org/v1/spacer.gif" width="5" height="1">
-    <a href="#changelog" target="_blank">Changelog</a>
-  </p>
-
-  <a href="https://marketplace.visualstudio.com/items?itemName=dotenv.dotenv-vscode">
-    <img src="https://res.cloudinary.com/dotenv-org/image/upload/v1679527751/dotenv-vscode_ilezvb.png"/>
-  </a>
-
   <table>
     <tr>
       <td>
@@ -33,7 +28,7 @@
 
   <a href="https://github.com/dotenv-org/dotenv-vscode"><img src="https://img.shields.io/visual-studio-marketplace/v/dotenv.dotenv-vscode?label=VS%20Marketplace&logo=visual-studio-code" alt="Version"></a>
 
-  <p>Bonus: <a href="https://dotenv.org" target="_blank">dotenv-vault</a> included as an optional feature</p>
+  <p>Bonus: <a href="https://dotenv.org?r=8" target="_blank">dotenv-vault</a> included as an optional feature</p>
   <br/>
   <br/>
 </div>
@@ -117,7 +112,7 @@ Multiple languages supported.
 
 Manage your secrets using <strong>dotenv-vault</strong>'s all-in-one toolkit. Say goodbye to scattered secrets across multiple platforms and tools.
 
-<a href="https://dotenv.org/" target="_blank">Read more about dotenv-vault here</a>. 
+<a href="https://dotenv.org?r=8" target="_blank">Read more about dotenv-vault here</a>. 
 
 Usage is similar to git. Run `CMD+Shift+P` (or `Ctrl+Shift+P`) and start typing `dotenv`.
 
@@ -138,7 +133,7 @@ dotenv push
 dotenv pull
 ```
 
-See <a href="https://dotenv.org" target="_blank">dotenv-vault</a> in action:
+See <a href="https://dotenv.org?r=8" target="_blank">dotenv-vault</a> in action:
 
 <img src="https://raw.githubusercontent.com/dotenv-org/dotenv-vscode/master/overview.gif">
 
