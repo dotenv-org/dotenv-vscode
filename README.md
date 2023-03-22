@@ -1,7 +1,7 @@
 <div align="center">
-  <a href="https://docs.dotenv.org/?r=8"><img src="https://raw.githubusercontent.com/motdotla/dotenv/master/dotenv.png" alt="dotenv-vscode" width="80" height="80"></a>
-  <h1>Official Dotenv for VSCode</h1>
-  <h4 align="center">Auto-cloaking, auto-completion, in-code secret peeking, and more.</h4>
+  <a href="https://dotenv.org/docs?r=8"><img src="https://raw.githubusercontent.com/motdotla/dotenv/master/dotenv.png" alt="dotenv-vscode" width="80" height="80"></a>
+  <h1>dotenv-vscode</h1>
+  <h4 align="center">Syntax highlighting, auto-cloaking, auto-completion, and in-code secret peeking.</h4>
 
   <p align="center">
     <a href="#install">Install</a>
@@ -20,20 +20,20 @@
   <table>
     <tr>
       <td>
-        <a href="https://res.cloudinary.com/dotenv-org/image/upload/v1662332054/autocloaking_uutakf.png"><img src="https://res.cloudinary.com/dotenv-org/image/upload/v1662332054/autocloaking_uutakf.png"/></a>
+        <a href="https://res.cloudinary.com/dotenv-org/image/upload/v1679528507/dotenv-vscode-autocloaking_kpr0ly.png"><img src="https://res.cloudinary.com/dotenv-org/image/upload/v1679528507/dotenv-vscode-autocloaking_kpr0ly.png"/></a>
       </td>
       <td>
-        <a href="https://res.cloudinary.com/dotenv-org/image/upload/v1662069727/vscode3_fhioqq.png"><img src="https://res.cloudinary.com/dotenv-org/image/upload/v1662069727/vscode3_fhioqq.png"/></a>
+        <a href="https://res.cloudinary.com/dotenv-org/image/upload/v1679528507/dotenv-vscode-autocompletion_rqlanf.png"><img src="https://res.cloudinary.com/dotenv-org/image/upload/v1679528507/dotenv-vscode-autocompletion_rqlanf.png"/></a>
       </td>
       <td>
-        <a href="https://res.cloudinary.com/dotenv-org/image/upload/v1662069726/vscode4_ejlsh9.png"><img src="https://res.cloudinary.com/dotenv-org/image/upload/v1662069726/vscode4_ejlsh9.png"/></a>
+        <a href="https://res.cloudinary.com/dotenv-org/image/upload/v1679528506/dotenv-vscode-secretpeeking_byznii.png"><img src="https://res.cloudinary.com/dotenv-org/image/upload/v1679528506/dotenv-vscode-secretpeeking_byznii.png"/></a>
       </td>
     </tr>
   </table>
 
   <a href="https://github.com/dotenv-org/dotenv-vscode"><img src="https://img.shields.io/visual-studio-marketplace/v/dotenv.dotenv-vscode?label=VS%20Marketplace&logo=visual-studio-code" alt="Version"></a>
 
-  <p>Bonus: You also get syntax highlighting and <a href="https://dotenv.org" target="_blank">Dotenv Vault</a>.</p>
+  <p>Bonus: <a href="https://dotenv.org" target="_blank">dotenv-vault</a> included as an optional feature</p>
   <br/>
   <br/>
 </div>
@@ -49,18 +49,27 @@ Install using VSCode Command Palette
 
 ## Usage
 
+### Syntax Highlighting
+
+It just works. Open your `.env` files in VSCode, and they will now be syntax highlighted.
+
+<hr/>
+
 ### Auto-cloaking
 
-It just works. Open your `.env` files in VSCode, and they will be auto-cloaked. Click the 'Toggle auto-cloaking' link at the top of your `.env` file to toggle it off.
+It just works. Open your `.env` files in VSCode, and they will be auto-cloaked. Click the 'Toggle auto-cloaking' link at the top of your `.env` file to toggle it off. Feel safer sharing your screen!
 
 <img src="https://res.cloudinary.com/dotenv-org/image/upload/v1664140588/toggle_itemcq.gif">
 
 Multiple .env file types supported.
 
 * .env
+* .env.example
+* .env.development
+* .env.staging
+* .env.production
 * .env.vault
 * .env.me
-* .env.example
 * .env.*
 * .flaskenv
 
@@ -68,7 +77,7 @@ Multiple .env file types supported.
 
 ### Auto-completion
 
-Start typing `process.env.` (or language specific env statement) and your cursor will be populated with auto-completion options directly from your .env file.
+Start typing `process.env.` (or language specific env statement) and your cursor will be populated with auto-completion options directly from your .env file. Cool!
 
 <img src="https://res.cloudinary.com/dotenv-org/image/upload/v1664140944/autocomplete_snic6t.gif"/>
 
@@ -87,7 +96,7 @@ Multiple languages supported.
 
 ### In-code secret peeking
 
-Hover your mouse over a `process.env.SECRET_KEY` or a `ENV["SECRET_KEY"]`, and you will be able to peek at its value without having to open your .env file.
+Hover your mouse over a `process.env.SECRET_KEY` or a `ENV["SECRET_KEY"]`, and you will be able to peek at its value without having to open your .env file. Convenient!
 
 <img src="https://res.cloudinary.com/dotenv-org/image/upload/v1664141169/secret-peeking_byzwex.gif"/>
 
@@ -104,17 +113,11 @@ Multiple languages supported.
 
 <hr/>
 
-### Syntax Highlighting
+### dotenv-vault (included but optional)
 
-It just works. Open your .env files in VSCode, they will now be syntax highlighted.
+Manage your secrets using <strong>dotenv-vault</strong>'s all-in-one toolkit. Say goodbye to scattered secrets across multiple platforms and tools.
 
-<hr/>
-
-### Vault
-
-Vault lets you sync your .env files quickly & securely. Stop sharing them over insecure channels like Slack and email, and never lose an important .env file again.
-
-<a href="https://dotenv.org/">Read more about Vault</a>. 
+<a href="https://dotenv.org/" target="_blank">Read more about dotenv-vault here</a>. 
 
 Usage is similar to git. Run `CMD+Shift+P` (or `Ctrl+Shift+P`) and start typing `dotenv`.
 
@@ -135,7 +138,7 @@ dotenv push
 dotenv pull
 ```
 
-See <a href="https://dotenv.org" target="_blank">Dotenv Vault</a> in action:
+See <a href="https://dotenv.org" target="_blank">dotenv-vault</a> in action:
 
 <img src="https://raw.githubusercontent.com/dotenv-org/dotenv-vscode/master/overview.gif">
 
@@ -163,4 +166,4 @@ See [CHANGELOG](CHANGELOG.md)
 
 <br/>
 <br/>
-Thank you for using Dotenv.
+Thank you for using dotenv-vscode.
