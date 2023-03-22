@@ -2,7 +2,7 @@
 
 #### Syntax highlighting, auto-cloaking, auto-completion, and in-code secret peeking.
 
-<a href="https://github.com/dotenv-org/dotenv-vscode"><img src="https://img.shields.io/visual-studio-marketplace/v/dotenv.dotenv-vscode?label=VS%20Marketplace&logo=visual-studio-code" alt="Version"></a>
+<a href="https://marketplace.visualstudio.com/items?itemName=dotenv.dotenv-vscode"><img src="https://img.shields.io/visual-studio-marketplace/v/dotenv.dotenv-vscode?label=VS%20Marketplace&logo=visual-studio-code" alt="Version"></a>
 
 <a href="https://marketplace.visualstudio.com/items?itemName=dotenv.dotenv-vscode">
 <img src="https://res.cloudinary.com/dotenv-org/image/upload/v1679527751/dotenv-vscode_ilezvb.png"/>
