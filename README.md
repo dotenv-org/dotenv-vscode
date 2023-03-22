@@ -2,10 +2,7 @@
 
 #### Syntax highlighting, auto-cloaking, auto-completion, and in-code secret peeking.
 
-* [Install](#install)
-* [Usage](#usage)
-* [Commands](#commands)
-* [Changelog](#changelog)
+<a href="https://github.com/dotenv-org/dotenv-vscode"><img src="https://img.shields.io/visual-studio-marketplace/v/dotenv.dotenv-vscode?label=VS%20Marketplace&logo=visual-studio-code" alt="Version"></a>
 
 <a href="https://marketplace.visualstudio.com/items?itemName=dotenv.dotenv-vscode">
 <img src="https://res.cloudinary.com/dotenv-org/image/upload/v1679527751/dotenv-vscode_ilezvb.png"/>
@@ -25,13 +22,9 @@
       </td>
     </tr>
   </table>
-
-  <a href="https://github.com/dotenv-org/dotenv-vscode"><img src="https://img.shields.io/visual-studio-marketplace/v/dotenv.dotenv-vscode?label=VS%20Marketplace&logo=visual-studio-code" alt="Version"></a>
-
-  <p>Bonus: <a href="https://dotenv.org?r=8" target="_blank">dotenv-vault</a> included as an optional feature</p>
-  <br/>
-  <br/>
 </div>
+
+<p><strong>Bonus:</strong> <a href="https://dotenv.org?r=8" target="_blank">dotenv-vault</a> included as an optional feature</p>
 
 ## Install
 
