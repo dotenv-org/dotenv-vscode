@@ -358,6 +358,30 @@ describe('providers', function () {
     })
   })
 
+  describe('#elixirCompletion', function () {
+    it('returns undefined at line 0 and wrong position', async function () {
+      const elixirFile = path.join(__dirname, '..', 'examples', 'elixir.exs')
+      const document = await vscode.workspace.openTextDocument(elixirFile)
+      const position = new vscode.Position(1, 13)
+
+      const result = providers.elixirCompletion.provideCompletionItems(document, position)
+
+      assert.equal(result, undefined)
+    })
+
+    it('returns value at line 1 and correct position', async function () {
+      const elixirFile = path.join(__dirname, '..', 'examples', 'elixir.exs')
+      const document = await vscode.workspace.openTextDocument(elixirFile)
+      const position = new vscode.Position(1, 15)
+
+      const result = providers.elixirCompletion.provideCompletionItems(document, position)
+
+      assert.equal(result[0].insertText, '("HELLO"')
+      assert.equal(result[0].label.label, 'HELLO')
+      assert.equal(result[0].label.detail, ' World')
+    })
+  })
+
   describe('#javascriptHover', function () {
     it('returns undefined at 0 line', async function () {
       const javascriptFile = path.join(__dirname, '..', 'examples', 'javascript.js')
@@ -673,6 +697,28 @@ describe('providers', function () {
       const position = new vscode.Position(0, 17)
 
       const result = providers.kotlinHover.provideHover(document, position)
+
+      assert.equal(result.contents[0], 'World')
+    })
+  })
+
+  describe('#elixirHover', function () {
+    it('returns undefined at 0 line with var format', async function () {
+      const elixirFile = path.join(__dirname, '..', 'examples', 'elixir.exs')
+      const document = await vscode.workspace.openTextDocument(elixirFile)
+      const position = new vscode.Position(0, 12)
+
+      const result = providers.elixirHover.provideHover(document, position)
+
+      assert.equal(result, undefined)
+    })
+
+    it('returns value at 0 line and correct position', async function () {
+      const elixirFile = path.join(__dirname, '..', 'examples', 'elixir.exs')
+      const document = await vscode.workspace.openTextDocument(elixirFile)
+      const position = new vscode.Position(0, 17)
+
+      const result = providers.elixirHover.provideHover(document, position)
 
       assert.equal(result.contents[0], 'World')
     })
