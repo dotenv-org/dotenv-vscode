@@ -8,7 +8,7 @@
   "homepage": "https://github.com/dotenv-org/dotenv-vscode",
   "icon": "dotenv.png",
   "galleryBanner": {
-    "color": "#000000",
+    "color": "#ECD53F",
     "theme": "dark"
   },
   "qna": false,
