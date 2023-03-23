@@ -11,7 +11,9 @@ All notable changes to the Official Dotenv VS Code extension will be documented 
 * Added autocomplete and hover support for elixir. [#48](https://github.com/dotenv-org/dotenv-vscode/issues/48)
 
 ### Fixed
+
 * Issue where autocloaking would overwrite other tokenColorCustomization settings resolved [#79](https://github.com/dotenv-org/dotenv-vscode/issues/79)
+
 ## 0.22.0
 
 ### Added
