@@ -2,7 +2,17 @@
 
 All notable changes to the Official Dotenv VS Code extension will be documented in this file.
 
-## [Unreleased](https://github.com/dotenv-org/dotenv-vscode/compare/v0.22.0...master)
+## [Unreleased](https://github.com/dotenv-org/dotenv-vscode/compare/v0.23.0...master)
+
+## 0.24.0
+
+### Added
+
+* Added `import.meta.env` format for javascript highlighting/autocomplete [#88](https://github.com/dotenv-org/dotenv-vscode/pull/88)
+
+### Fixed
+
+* Issue where values wouldn't unhide after being autocloaked [#85](https://github.com/dotenv-org/dotenv-vscode/issues/85) [#86] (https://github.com/dotenv-org/dotenv-vscode/issues/86) [#87] (https://github.com/dotenv-org/dotenv-vscode/pull/87)
 
 ## 0.23.0
 
