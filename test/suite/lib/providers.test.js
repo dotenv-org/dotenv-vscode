@@ -9,7 +9,7 @@ const providers = require('../../../lib/providers')
 
 describe('providers', function () {
   describe('#javascriptCompletion', function () {
-    it('returns undefined at line 0 and wrong position', async function () {
+    it('returns undefined at line 0 and wrong position for process', async function () {
       const javascriptFile = path.join(__dirname, '..', 'examples', 'javascript.js')
       const document = await vscode.workspace.openTextDocument(javascriptFile)
       const position = new vscode.Position(1, 22)
@@ -19,10 +19,32 @@ describe('providers', function () {
       assert.equal(result, undefined)
     })
 
-    it('returns value at line 1 and correct position', async function () {
+    it('returns value at line 1 and correct position for process', async function () {
       const javascriptFile = path.join(__dirname, '..', 'examples', 'javascript.js')
       const document = await vscode.workspace.openTextDocument(javascriptFile)
       const position = new vscode.Position(1, 24)
+
+      const result = providers.javascriptCompletion.provideCompletionItems(document, position)
+
+      assert.equal(result[0].insertText, '.HELLO')
+      assert.equal(result[0].label.label, 'HELLO')
+      assert.equal(result[0].label.detail, ' World')
+    })
+
+    it('returns undefined at line 0 and wrong position for import.meta', async function () {
+      const javascriptFile = path.join(__dirname, '..', 'examples', 'javascript.js')
+      const document = await vscode.workspace.openTextDocument(javascriptFile)
+      const position = new vscode.Position(3, 27)
+
+      const result = providers.javascriptCompletion.provideCompletionItems(document, position)
+
+      assert.equal(result, undefined)
+    })
+
+    it('returns value at line 1 and correct position for import.meta', async function () {
+      const javascriptFile = path.join(__dirname, '..', 'examples', 'javascript.js')
+      const document = await vscode.workspace.openTextDocument(javascriptFile)
+      const position = new vscode.Position(3, 28)
 
       const result = providers.javascriptCompletion.provideCompletionItems(document, position)
 
@@ -383,7 +405,7 @@ describe('providers', function () {
   })
 
   describe('#javascriptHover', function () {
-    it('returns undefined at 0 line', async function () {
+    it('returns undefined at 0 line for process', async function () {
       const javascriptFile = path.join(__dirname, '..', 'examples', 'javascript.js')
       const document = await vscode.workspace.openTextDocument(javascriptFile)
       const position = new vscode.Position(0, 22)
@@ -393,10 +415,30 @@ describe('providers', function () {
       assert.equal(result, undefined)
     })
 
-    it('returns value at 0 line and correct position', async function () {
+    it('returns value at 0 line and correct position for process', async function () {
       const javascriptFile = path.join(__dirname, '..', 'examples', 'javascript.js')
       const document = await vscode.workspace.openTextDocument(javascriptFile)
       const position = new vscode.Position(0, 26)
+
+      const result = providers.javascriptHover.provideHover(document, position)
+
+      assert.equal(result.contents[0], 'World')
+    })
+
+    it('returns undefined at 0 line for import.meta', async function () {
+      const javascriptFile = path.join(__dirname, '..', 'examples', 'javascript.js')
+      const document = await vscode.workspace.openTextDocument(javascriptFile)
+      const position = new vscode.Position(2, 27)
+
+      const result = providers.javascriptHover.provideHover(document, position)
+
+      assert.equal(result, undefined)
+    })
+
+    it('returns value at 0 line and correct position for import.meta', async function () {
+      const javascriptFile = path.join(__dirname, '..', 'examples', 'javascript.js')
+      const document = await vscode.workspace.openTextDocument(javascriptFile)
+      const position = new vscode.Position(2, 30)
 
       const result = providers.javascriptHover.provideHover(document, position)
 
