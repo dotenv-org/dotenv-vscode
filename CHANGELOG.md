@@ -2,7 +2,13 @@
 
 All notable changes to the Official Dotenv VS Code extension will be documented in this file.
 
-## [Unreleased](https://github.com/dotenv-org/dotenv-vscode/compare/v0.23.0...master)
+## [Unreleased](https://github.com/dotenv-org/dotenv-vscode/compare/v0.24.1...master)
+
+## 0.24.1
+
+### Fixed
+
+* Reverted code causing autocloaking to fail [#93](https://github.com/dotenv-org/dotenv-vscode/pull/93)
 
 ## 0.24.0
 
@@ -12,7 +18,7 @@ All notable changes to the Official Dotenv VS Code extension will be documented 
 
 ### Fixed
 
-* Issue where values wouldn't unhide after being autocloaked [#85](https://github.com/dotenv-org/dotenv-vscode/issues/85) [#86] (https://github.com/dotenv-org/dotenv-vscode/issues/86) [#87] (https://github.com/dotenv-org/dotenv-vscode/pull/87)
+* Issue where values wouldn't unhide after being autocloaked [#85](https://github.com/dotenv-org/dotenv-vscode/issues/85) [#86](https://github.com/dotenv-org/dotenv-vscode/issues/86) [#87](https://github.com/dotenv-org/dotenv-vscode/pull/87)
 
 ## 0.23.0
 
