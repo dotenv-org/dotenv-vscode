@@ -6,14 +6,14 @@ const peeking = require('./lib/peeking')
 function activate (context) {
   console.log('Dotenv is active')
 
-  console.log('Load autocompletion')
-  autocompletion.run(context)
+  // console.log('Load autocompletion')
+  // autocompletion.run(context)
 
-  console.log('Load commands')
-  commands.run(context)
+  // console.log('Load commands')
+  // commands.run(context)
 
-  console.log('Load secret peeking')
-  peeking.run(context)
+  // console.log('Load secret peeking')
+  // peeking.run(context)
 
   console.log('Load autocloaking')
   autocloaking.run(context)

@@ -33,21 +33,20 @@
   ],
   "main": "./extension.js",
   "contributes": {
+    "configurationDefaults": {
+      "[dotenv]": {
+        "enableAutocloaking": true
+      }
+    },
     "configuration": {
       "type": "object",
-      "title": "Dotenv Official +Vault",
+      "title": "Dotenv",
       "properties": {
-        "dotenv.enableAutocloaking": {
+        "[dotenv].enableAutocloaking": {
           "scope": "resource",
           "type": "boolean",
           "default": true,
           "description": "Enable auto-cloaking for your .env files"
-        },
-        "dotenv.cloakColor": {
-          "scope": "resource",
-          "type": "string",
-          "default": "#000000",
-          "description": "Change the color of the cloak for your .env files"
         }
       }
     },

@@ -8,3 +8,4 @@ node_modules
 !.env.project
 !.env.vault
 !.env.example
+.flaskenv*
