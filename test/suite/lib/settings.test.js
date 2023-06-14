@@ -14,6 +14,14 @@ describe('settings', function () {
     })
   })
 
+  describe('#userConfig', function () {
+    it('returns user configuration', function () {
+      const result = settings.userConfig()
+
+      assert.strictEqual(typeof result, 'object')
+    })
+  })
+
   describe('#autocloakingEnabled', function () {
     it('is true by default', function () {
       const result = settings.autocloakingEnabled()

@@ -3,7 +3,7 @@ const autocompletion = require('./lib/autocompletion')
 const commands = require('./lib/commands')
 const peeking = require('./lib/peeking')
 
-function activate (context) {
+async function activate (context) {
   console.log('Dotenv is active')
 
   console.log('Load autocompletion')
@@ -16,7 +16,7 @@ function activate (context) {
   peeking.run(context)
 
   console.log('Load autocloaking')
-  autocloaking.run(context)
+  await autocloaking.run(context)
 }
 
 function deactivate () {
