@@ -2,7 +2,13 @@
 
 All notable changes to the Official Dotenv VS Code extension will be documented in this file.
 
-## [Unreleased](https://github.com/dotenv-org/dotenv-vscode/compare/v0.24.2...master)
+## [Unreleased](https://github.com/dotenv-org/dotenv-vscode/compare/v0.24.3...master)
+
+## 0.24.3
+
+### Changed
+
+* 🐞 Fix `textMateRules` setting when not present in user machine `settings.json` file. [#94](https://github.com/dotenv-org/dotenv-vscode/pull/94)
 
 ## 0.24.2
 
