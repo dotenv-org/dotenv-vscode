@@ -31,4 +31,20 @@ describe('settings', function () {
       assert.equal(result, true)
     })
   })
+
+  describe('#cloakColor', function () {
+    it('is 000000 by default', function () {
+      const result = settings.cloakColor()
+
+      assert.equal(result, '#000000')
+    })
+  })
+
+  describe('#cloakIcon', function () {
+    it('is █ by default', function () {
+      const result = settings.cloakIcon()
+
+      assert.equal(result, '█')
+    })
+  })
 })

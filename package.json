@@ -48,6 +48,12 @@
           "type": "string",
           "default": "#000000",
           "description": "Change the color of the cloak for your .env files"
+        },
+        "dotenv.cloakIcon": {
+          "scope": "resource",
+          "type": "string",
+          "default": "█",
+          "description": "Change the icon of the cloak for your .env files"
         }
       }
     },
