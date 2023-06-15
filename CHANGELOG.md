@@ -4,6 +4,12 @@ All notable changes to the Official Dotenv VS Code extension will be documented 
 
 ## [Unreleased](https://github.com/dotenv-org/dotenv-vscode/compare/v0.24.3...master)
 
+## 0.27.0
+
+### Added
+
+* Write to `settings.json` with `files.associations` to make sure `.env` files do not get the properties association. [#77](https://github.com/dotenv-org/dotenv-vscode/issues/77)
+
 ## 0.26.0
 
 ### Added
