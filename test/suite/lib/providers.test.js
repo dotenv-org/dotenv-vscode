@@ -5,6 +5,7 @@ const assert = require('assert')
 const path = require('path')
 const vscode = require('vscode')
 
+const settings = require('../../../lib/settings')
 const providers = require('../../../lib/providers')
 
 describe('providers', function () {
@@ -412,7 +413,7 @@ describe('providers', function () {
 
       const result = providers.javascriptHover.provideHover(document, position)
 
-      assert.equal(result, undefined)
+      assert.equal(result.contents[0], settings.missingText())
     })
 
     it('returns value at 0 line and correct position for process', async function () {
@@ -432,7 +433,7 @@ describe('providers', function () {
 
       const result = providers.javascriptHover.provideHover(document, position)
 
-      assert.equal(result, undefined)
+      assert.equal(result.contents[0], settings.missingText())
     })
 
     it('returns value at 0 line and correct position for import.meta', async function () {
@@ -454,7 +455,7 @@ describe('providers', function () {
 
       const result = providers.rubyHover.provideHover(document, position)
 
-      assert.equal(result, undefined)
+      assert.equal(result.contents[0], settings.missingText())
     })
 
     it('returns value at 0 line and correct position', async function () {
@@ -476,7 +477,7 @@ describe('providers', function () {
 
       const result = providers.pythonHover.provideHover(document, position)
 
-      assert.equal(result, undefined)
+      assert.equal(result.contents[0], settings.missingText())
     })
 
     it('returns value at 0 line and correct position for os.environ.get format', async function () {
@@ -496,7 +497,7 @@ describe('providers', function () {
 
       const result = providers.pythonHover.provideHover(document, position)
 
-      assert.equal(result, undefined)
+      assert.equal(result.contents[0], settings.missingText())
     })
 
     it('returns value at 0 line and correct position for os.getenv format', async function () {
@@ -516,7 +517,7 @@ describe('providers', function () {
 
       const result = providers.pythonHover.provideHover(document, position)
 
-      assert.equal(result, undefined)
+      assert.equal(result.contents[0], settings.missingText())
     })
 
     it('returns value at 0 line and correct position for os.environ[] format', async function () {
@@ -538,7 +539,7 @@ describe('providers', function () {
 
       const result = providers.phpHover.provideHover(document, position)
 
-      assert.equal(result, undefined)
+      assert.equal(result.contents[0], settings.missingText())
     })
 
     it('returns value at 0 line and correct position for $_ENV[] format', async function () {
@@ -558,7 +559,7 @@ describe('providers', function () {
 
       const result = providers.phpHover.provideHover(document, position)
 
-      assert.equal(result, undefined)
+      assert.equal(result.contents[0], settings.missingText())
     })
 
     it('returns value at 0 line and correct position for $_SERVER[] format', async function () {
@@ -578,7 +579,7 @@ describe('providers', function () {
 
       const result = providers.phpHover.provideHover(document, position)
 
-      assert.equal(result, undefined)
+      assert.equal(result.contents[0], settings.missingText())
     })
 
     it('returns value at 0 line and correct position for getenv() format', async function () {
@@ -600,7 +601,7 @@ describe('providers', function () {
 
       const result = providers.goHover.provideHover(document, position)
 
-      assert.equal(result, undefined)
+      assert.equal(result.contents[0], settings.missingText())
     })
 
     it('returns value at 0 line and correct position', async function () {
@@ -622,7 +623,7 @@ describe('providers', function () {
 
       const result = providers.javaHover.provideHover(document, position)
 
-      assert.equal(result, undefined)
+      assert.equal(result.contents[0], settings.missingText())
     })
 
     it('returns value at 0 line and correct position', async function () {
@@ -644,7 +645,7 @@ describe('providers', function () {
 
       const result = providers.csharpHover.provideHover(document, position)
 
-      assert.equal(result, undefined)
+      assert.equal(result.contents[0], settings.missingText())
     })
 
     it('returns value at 0 line and correct position', async function () {
@@ -666,7 +667,7 @@ describe('providers', function () {
 
       const result = providers.rustHover.provideHover(document, position)
 
-      assert.equal(result, undefined)
+      assert.equal(result.contents[0], settings.missingText())
     })
 
     it('returns value at 0 line and correct position with var format', async function () {
@@ -686,7 +687,7 @@ describe('providers', function () {
 
       const result = providers.rustHover.provideHover(document, position)
 
-      assert.equal(result, undefined)
+      assert.equal(result.contents[0], settings.missingText())
     })
 
     it('returns value at 0 line and correct position with var_os format', async function () {
@@ -708,7 +709,7 @@ describe('providers', function () {
 
       const result = providers.dartHover.provideHover(document, position)
 
-      assert.equal(result, undefined)
+      assert.equal(result.contents[0], settings.missingText())
     })
 
     it('returns value at 0 line and correct position', async function () {
@@ -730,7 +731,7 @@ describe('providers', function () {
 
       const result = providers.kotlinHover.provideHover(document, position)
 
-      assert.equal(result, undefined)
+      assert.equal(result.contents[0], settings.missingText())
     })
 
     it('returns value at 0 line and correct position', async function () {
@@ -752,7 +753,7 @@ describe('providers', function () {
 
       const result = providers.elixirHover.provideHover(document, position)
 
-      assert.equal(result, undefined)
+      assert.equal(result.contents[0], settings.missingText())
     })
 
     it('returns value at 0 line and correct position', async function () {

@@ -6,14 +6,6 @@ const assert = require('assert')
 const settings = require('../../../lib/settings')
 
 describe('settings', function () {
-  describe('#workspaceConfig', function () {
-    it('returns workspace configuration', function () {
-      const result = settings.workspaceConfig()
-
-      assert.strictEqual(typeof result, 'object')
-    })
-  })
-
   describe('#userConfig', function () {
     it('returns user configuration', function () {
       const result = settings.userConfig()
@@ -40,6 +32,14 @@ describe('settings', function () {
     })
   })
 
+  describe('#secretpeekingEnabled', function () {
+    it('is true by default', function () {
+      const result = settings.secretpeekingEnabled()
+
+      assert.equal(result, true)
+    })
+  })
+
   describe('#cloakColor', function () {
     it('is 000000 by default', function () {
       const result = settings.cloakColor()
@@ -53,6 +53,14 @@ describe('settings', function () {
       const result = settings.cloakIcon()
 
       assert.equal(result, '█')
+    })
+  })
+
+  describe('#missingText', function () {
+    it('is █ by default', function () {
+      const result = settings.missingText()
+
+      assert.equal(result, 'MISSING from .env file')
     })
   })
 })
