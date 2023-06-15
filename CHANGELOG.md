@@ -4,6 +4,12 @@ All notable changes to the Official Dotenv VS Code extension will be documented 
 
 ## [Unreleased](https://github.com/dotenv-org/dotenv-vscode/compare/v0.24.3...master)
 
+## 0.27.1
+
+### Changed
+
+* `await` for async function to set `files.associations` in extension.js
+
 ## 0.27.0
 
 ### Added
