@@ -10,13 +10,13 @@
           {
             "include": "#line-comment"
           }
-        ] 
+        ]
       }
      }
     },
     {
       "comment": "ENV entry",
-      "match": "^\\s?(.*)\\s?(\\=)(.*)$",
+      "match": "^\\s?(.*?)\\s?(\\=)(.*)$",
       "captures": {
         "1": {
           "patterns": [
