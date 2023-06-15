@@ -33,10 +33,10 @@ describe('settings', function () {
   })
 
   describe('#secretpeekingEnabled', function () {
-    it('is false by default', function () {
+    it('is true by default', function () {
       const result = settings.secretpeekingEnabled()
 
-      assert.equal(result, false)
+      assert.equal(result, true)
     })
   })
 

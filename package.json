@@ -46,7 +46,7 @@
         "dotenv.enableSecretpeeking": {
           "scope": "resource",
           "type": "boolean",
-          "default": false,
+          "default": true,
           "description": "Enable in-code secret peeking for your environment variables"
         },
         "dotenv.cloakColor": {
