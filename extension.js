@@ -11,7 +11,7 @@ async function activate (context) {
   fileAssociations.run()
 
   console.log('Load autocompletion')
-  autocompletion.run(context)
+  await autocompletion.run(context)
 
   console.log('Load commands')
   commands.run(context)
