@@ -4,6 +4,12 @@ All notable changes to the Official Dotenv VS Code extension will be documented 
 
 ## [Unreleased](https://github.com/dotenv-org/dotenv-vscode/compare/v0.24.3...master)
 
+## 0.25.0
+
+### Added
+
+* Change the cloak icon in settings.
+
 ## 0.24.3
 
 ### Changed
