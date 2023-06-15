@@ -8,7 +8,7 @@ All notable changes to the Official Dotenv VS Code extension will be documented 
 
 ### Added
 
-* Add setting to turn off in-code secret peeking.
+* Add setting to turn off in-code secret peeking. [#95](https://github.com/dotenv-org/dotenv-vscode/pull/95)
 
 ## 0.25.0
 
