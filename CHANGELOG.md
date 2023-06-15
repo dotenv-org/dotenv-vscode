@@ -2,15 +2,21 @@
 
 All notable changes to the Official Dotenv VS Code extension will be documented in this file.
 
-## [Unreleased](https://github.com/dotenv-org/dotenv-vscode/compare/v0.24.3...master)
+## [Unreleased](https://github.com/dotenv-org/dotenv-vscode/compare/v0.27.2...master)
 
-## 0.27.1
+## [0.27.2](https://github.com/dotenv-org/dotenv-vscode/compare/v0.27.2...v0.27.1) (2023-06-15)
+
+### Added
+
+* For autocompletion, respect secret peeking setting off or on
+
+## [0.27.1](https://github.com/dotenv-org/dotenv-vscode/compare/v0.27.1...v0.27.0) (2023-06-15)
 
 ### Changed
 
 * `await` for async function to set `files.associations` in extension.js
 
-## 0.27.0
+## [0.27.0](https://github.com/dotenv-org/dotenv-vscode/compare/v0.27.0...v0.26.0) (2023-06-15)
 
 ### Added
 
