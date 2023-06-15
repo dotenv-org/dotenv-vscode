@@ -8,7 +8,7 @@ All notable changes to the Official Dotenv VS Code extension will be documented 
 
 ### Added
 
-* Change the cloak icon in settings.
+* Add ability to change the cloak icon in settings.
 
 ## 0.24.3
 
