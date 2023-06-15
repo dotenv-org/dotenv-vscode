@@ -8,7 +8,7 @@ All notable changes to the Official Dotenv VS Code extension will be documented 
 
 ### Added
 
-* For autocompletion, respect secret peeking setting off or on
+* For autocompletion, respect secret peeking setting off or on [#97](https://github.com/dotenv-org/dotenv-vscode/pull/97)
 
 ## [0.27.1](https://github.com/dotenv-org/dotenv-vscode/compare/v0.27.1...v0.27.0) (2023-06-15)
 
