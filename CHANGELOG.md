@@ -2,7 +2,13 @@
 
 All notable changes to the Official Dotenv VS Code extension will be documented in this file.
 
-## [Unreleased](https://github.com/dotenv-org/dotenv-vscode/compare/v0.27.2...master)
+## [Unreleased](https://github.com/dotenv-org/dotenv-vscode/compare/v0.27.3...master)
+
+## [0.27.3](https://github.com/dotenv-org/dotenv-vscode/compare/v0.27.3...v0.27.2) (2023-06-15)
+
+### Changed
+
+* Improved environment variable capture [#96](https://github.com/dotenv-org/dotenv-vscode/pull/96)
 
 ## [0.27.2](https://github.com/dotenv-org/dotenv-vscode/compare/v0.27.2...v0.27.1) (2023-06-15)
 
