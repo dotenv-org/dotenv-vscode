@@ -3,7 +3,7 @@
   "displayName": "Dotenv Official +Vault",
   "description": "Official Dotenv. Syntax highlighting, auto-cloaking, auto-completion, in-code secret peeking, and optionally dotenv-vault.",
   "author": "Mot @motdotla",
-  "version": "0.25.0",
+  "version": "0.26.0",
   "license": "MIT",
   "homepage": "https://github.com/dotenv-org/dotenv-vscode",
   "icon": "dotenv.png",
@@ -42,6 +42,12 @@
           "type": "boolean",
           "default": true,
           "description": "Enable auto-cloaking for your .env files"
+        },
+        "dotenv.enableSecretpeeking": {
+          "scope": "resource",
+          "type": "boolean",
+          "default": false,
+          "description": "Enable in-code secret peeking for your environment variables"
         },
         "dotenv.cloakColor": {
           "scope": "resource",
