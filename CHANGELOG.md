@@ -2,7 +2,13 @@
 
 All notable changes to the Official Dotenv VS Code extension will be documented in this file.
 
-## [Unreleased](https://github.com/dotenv-org/dotenv-vscode/compare/v0.27.3...master)
+## [Unreleased](https://github.com/dotenv-org/dotenv-vscode/compare/v0.28.0...master)
+
+## [0.28.0](https://github.com/dotenv-org/dotenv-vscode/compare/v0.28.0...v0.27.3) (2023-07-02)
+
+### Changed
+
+* Bumped `dotenv-vault` cli to `1.24.0`
 
 ## [0.27.3](https://github.com/dotenv-org/dotenv-vscode/compare/v0.27.3...v0.27.2) (2023-06-15)
 
