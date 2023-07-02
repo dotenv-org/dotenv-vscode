@@ -50,6 +50,7 @@ Click `Extensions` > `...` > `Install from VSIX` > `Select dotenv-vscode-*-*-*.v
 For those with access.
 
 ```
+npm version patch
 npm run publish
 ```
 
