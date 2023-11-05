@@ -7,3 +7,9 @@ vsc-extension-quickstart.md
 **/jsconfig.json
 **/*.map
 **/.eslintrc.json
+
+.DS_Store
+.env*
+!.env.project
+!.env.vault
+!.env.example
