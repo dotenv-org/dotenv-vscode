@@ -4,6 +4,12 @@ All notable changes to the Official Dotenv VS Code extension will be documented 
 
 ## [Unreleased](https://github.com/dotenv-org/dotenv-vscode/compare/v0.28.0...master)
 
+## [0.28.1](https://github.com/dotenv-org/dotenv-vscode/compare/v0.28.1...v0.28.0) (2023-11-04)
+
+### Added
+
+* Add additional files to `.vscodeignore`
+
 ## [0.28.0](https://github.com/dotenv-org/dotenv-vscode/compare/v0.28.0...v0.27.3) (2023-07-02)
 
 ### Changed
